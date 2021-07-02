@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Cấu hình Database Đích on Di chuyển Database trên AWS - Oracle To Aurora (PostgreSQL)</title>
+    <title>Cấu hình Database Đích on Di chuyển Database trên AWS</title>
     <link>/vi/2-oracle-aurora/2-migration/3-config-target-db/</link>
-    <description>Recent content in Cấu hình Database Đích on Di chuyển Database trên AWS - Oracle To Aurora (PostgreSQL)</description>
+    <description>Recent content in Cấu hình Database Đích on Di chuyển Database trên AWS</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Thu, 01 Jan 1970 07:33:40 +0700</lastBuildDate>
     
