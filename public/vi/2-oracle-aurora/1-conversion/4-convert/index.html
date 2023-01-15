@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.69.0" />
+    <meta name="generator" content="Hugo 0.99.1" />
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Chuyển đổi Schema :: Di chuyển Database trên AWS</title>
 
     
-    <link href="/css/nucleus.css?1631091276" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1631091276" rel="stylesheet">
-    <link href="/css/hybrid.css?1631091276" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1631091276" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1631091276" rel="stylesheet">
-    <link href="/css/auto-complete.css?1631091276" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1631091276" rel="stylesheet">
-    <link href="/css/theme.css?1631091276" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1631091276" rel="stylesheet">
+    <link href="/css/nucleus.css?1673819160" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1673819160" rel="stylesheet">
+    <link href="/css/hybrid.css?1673819160" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1673819160" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1673819160" rel="stylesheet">
+    <link href="/css/auto-complete.css?1673819160" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1673819160" rel="stylesheet">
+    <link href="/css/theme.css?1673819160" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1673819160" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1631091276" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1673819160" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1631091276"></script>
+    <script src="/js/jquery-3.3.1.min.js?1673819160"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1631091276"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1631091276"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1673819160"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1673819160"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1631091276"></script>
+<script type="text/javascript" src="/js/search.js?1673819160"></script>
 
     
   </div>
@@ -351,7 +351,7 @@
   
     
     <li data-nav-id="/vi/2-oracle-aurora/1-conversion/4-convert/" title="Chuyển đổi Schema" class="dd-item 
-        
+        parent
         active
         
         ">
@@ -945,7 +945,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>07-09-2021</font></i>
+        <i><font color=orange>16-01-2023</font></i>
     </left>
     <left>
         <br>
@@ -1058,7 +1058,7 @@
 </ol>
 <p>Bạn có thể xem các DDL được sinh ra từ cửa sổ Project, và thay đổi chúng trước khi áp dụng lên CSDL đích. Bạn cũng có thể chọn lưu lại chúng dưới dạng .sql cho các ứng dụng sau này.</p>
 
-<div class="notices warning" ><p>Bạn có thể sẽ nhận được hộp thoại thông báo <strong>&ldquo;Object may already exist in the target database, replace?&quot;</strong>. Chọn <strong>Yes</strong> và quá trình chuyển đổi sẽ được chạy.</p>
+<div class="notices warning" ><p>Bạn có thể sẽ nhận được hộp thoại thông báo <strong>&ldquo;Object may already exist in the target database, replace?&rdquo;</strong>. Chọn <strong>Yes</strong> và quá trình chuyển đổi sẽ được chạy.</p>
 </div>
 
 <p><img src="/images/2/14.png?width=90pc" alt="Convert">
@@ -1073,9 +1073,9 @@ AWS SCT phân tích schema và tạo báo cáo đánh giá di chuyển cơ sở 
 <p><img src="/images/2/16.png?width=90pc" alt="Convert">
 Kiểm tra từng vấn đề được liệt kê và so sánh nội dung trong bảng Oracle nguồn và bảng Aurora PostgreSQL đích. Các vấn đề đã được giải quyết chưa? Và làm thế nào?</p>
 <p>AWS SCT phân tích schema và tạo báo cáo đánh giá di chuyển cơ sở dữ liệu cho việc chuyển đổi sang PostgreSQL. Các mục có dấu chấm than màu đỏ bên cạnh không thể được dịch trực tiếp từ nguồn sang đích. Điều này bao gồm Procedure, và Package đang lưu trữ. Bạn cần sửa đổi thủ công các đối tượng này để làm cho chúng tương thích với cơ sở dữ liệu đích. Bạn có thể hoàn thành một trong các tác vụ sau để khắc phục sự cố:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">1. Sửa đổi các đối tượng trên cơ sở dữ liệu Oracle nguồn để AWS SCT có thể chuyển đổi các đối tượng sang cơ sở dữ liệu Aurora PostgreSQL đích.\
-2. Thay vì sửa đổi đối tượng cơ sở dữ liệu Oracle nguồn, hãy sửa đổi các tập lệnh mà AWS SCT tạo trước khi áp dụng các tập lệnh trên cơ sở dữ liệu Aurora PostgreSQL đích.
-</code></pre></div><p>Vì thời gian, chúng ta bỏ qua việc sửa đổi tất cả các đối tượng mà AWS SCT đã đánh dấu là không thể tự động chuyển đổi. Thay vào đó, để làm ví dụ, chúng ta sẽ sửa đổi thủ công procedure <code>GENERATESEATS</code> và <code>GENERATE_TICKETS</code>  trong SCT để làm cho chúng tương thích với cơ sở dữ liệu mục tiêu.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>1. Sửa đổi các đối tượng trên cơ sở dữ liệu Oracle nguồn để AWS SCT có thể chuyển đổi các đối tượng sang cơ sở dữ liệu Aurora PostgreSQL đích.\
+</span></span><span style="display:flex;"><span>2. Thay vì sửa đổi đối tượng cơ sở dữ liệu Oracle nguồn, hãy sửa đổi các tập lệnh mà AWS SCT tạo trước khi áp dụng các tập lệnh trên cơ sở dữ liệu Aurora PostgreSQL đích.
+</span></span></code></pre></div><p>Vì thời gian, chúng ta bỏ qua việc sửa đổi tất cả các đối tượng mà AWS SCT đã đánh dấu là không thể tự động chuyển đổi. Thay vào đó, để làm ví dụ, chúng ta sẽ sửa đổi thủ công procedure <code>GENERATESEATS</code> và <code>GENERATE_TICKETS</code>  trong SCT để làm cho chúng tương thích với cơ sở dữ liệu mục tiêu.</p>
 <p>Nếu bạn chọn vào procedure <code>GENERATESEATS</code> và <code>GENERATE_TICKETS</code>, bạn sẽ thấy rằng SCT không thể tự động chuyển đổi mã vì <strong>APPEND Hint</strong> không được hỗ trợ trong PostgreSQL.</p>
 <ol start="4">
 <li>Chọn vào procedure <code>GENERATESEATS</code> và xóa đi <code>/*+ APPEND */</code> ở lệnh <code>INSERT</code>.</li>
@@ -1095,7 +1095,7 @@ Kiểm tra từng vấn đề được liệt kê và so sánh nội dung trong 
 </ol>
 <p><img src="/images/2/20.png?width=90pc" alt="Convert"></p>
 <ol start="9">
-<li>Bạn có thể được thông báo bằng một hộp thoại <strong>&ldquo;Object may already exist in the target database, replace?&quot;</strong>. Chọn <strong>Yes</strong>.</li>
+<li>Bạn có thể được thông báo bằng một hộp thoại <strong>&ldquo;Object may already exist in the target database, replace?&rdquo;</strong>. Chọn <strong>Yes</strong>.</li>
 </ol>
 <p><img src="/images/2/21.png?width=90pc" alt="Convert"></p>
 <ol start="10">
@@ -1613,19 +1613,19 @@ Kiểm tra từng vấn đề được liệt kê và so sánh nội dung trong 
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1631091276"></script>
-    <script src="/js/perfect-scrollbar.min.js?1631091276"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1631091276"></script>
-    <script src="/js/jquery.sticky.js?1631091276"></script>
-    <script src="/js/featherlight.min.js?1631091276"></script>
-    <script src="/js/highlight.pack.js?1631091276"></script>
+    <script src="/js/clipboard.min.js?1673819160"></script>
+    <script src="/js/perfect-scrollbar.min.js?1673819160"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1673819160"></script>
+    <script src="/js/jquery.sticky.js?1673819160"></script>
+    <script src="/js/featherlight.min.js?1673819160"></script>
+    <script src="/js/highlight.pack.js?1673819160"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1631091276"></script>
-    <script src="/js/learn.js?1631091276"></script>
-    <script src="/js/hugo-learn.js?1631091276"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1673819160"></script>
+    <script src="/js/learn.js?1673819160"></script>
+    <script src="/js/hugo-learn.js?1673819160"></script>
 
-    <link href="/mermaid/mermaid.css?1631091276" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1631091276"></script>
+    <link href="/mermaid/mermaid.css?1673819160" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1673819160"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

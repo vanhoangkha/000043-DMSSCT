@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.69.0" />
+    <meta name="generator" content="Hugo 0.99.1" />
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Kiểm tra Database Đích :: Di chuyển Database trên AWS</title>
 
     
-    <link href="/css/nucleus.css?1631091277" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1631091277" rel="stylesheet">
-    <link href="/css/hybrid.css?1631091277" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1631091277" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1631091277" rel="stylesheet">
-    <link href="/css/auto-complete.css?1631091277" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1631091277" rel="stylesheet">
-    <link href="/css/theme.css?1631091277" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1631091277" rel="stylesheet">
+    <link href="/css/nucleus.css?1673819160" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1673819160" rel="stylesheet">
+    <link href="/css/hybrid.css?1673819160" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1673819160" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1673819160" rel="stylesheet">
+    <link href="/css/auto-complete.css?1673819160" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1673819160" rel="stylesheet">
+    <link href="/css/theme.css?1673819160" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1673819160" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1631091277" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1673819160" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1631091277"></script>
+    <script src="/js/jquery-3.3.1.min.js?1673819160"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1631091277"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1631091277"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1673819160"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1673819160"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1631091277"></script>
+<script type="text/javascript" src="/js/search.js?1673819160"></script>
 
     
   </div>
@@ -587,7 +587,7 @@
   
     
     <li data-nav-id="/vi/2-oracle-aurora/2-migration/7-inspect-content/" title="Kiểm tra Database Đích" class="dd-item 
-        
+        parent
         active
         
         ">
@@ -945,7 +945,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>07-09-2021</font></i>
+        <i><font color=orange>16-01-2023</font></i>
     </left>
     <left>
         <br>
@@ -1061,9 +1061,9 @@
 <li>Mở ứng dụng <strong>pgAdmin4</strong> trên <strong>Máy chủ EC2 server</strong>, và kết nối đến <strong>CSDL Aurora RDS (PostgreSQL) đích</strong>.</li>
 <li>Kiểm tra dữ liệu đã di chuyển bằng cách truy vấn dữ liệu trong CSDL đích. Ví dụ bên dưới sẽ cho ra kết quả 2 dòng trong bảng:</li>
 </ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span>
-<span style="color:#66d9ef">FROM</span> dms_sample.sport_type;
-</code></pre></div><p><img src="/images/2/43a.png?width=90pc" alt="Inspect"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> dms_sample.sport_type;
+</span></span></code></pre></div><p><img src="/images/2/43a.png?width=90pc" alt="Inspect"></p>
 
 <div class="notices note" ><p>Baseball, và football là hai môn thể thao duy nhất được liệt kê trong bảng này. Trong phần tiếp theo, bạn sẽ chèn một số bản ghi mới vào cơ sở dữ liệu nguồn với thông tin về các loại hình thể thao khác. DMS sẽ tự động sao chép các bản ghi mới này từ cơ sở dữ liệu nguồn sang cơ sở dữ liệu đích.</p>
 </div>
@@ -1089,7 +1089,7 @@
 					<a href="/2-oracle-aurora/2-migration/7-inspect-content/_index.vi.files/AddConstraintsPostgreSQL.sql" >
 						AddConstraintsPostgreSQL.sql
 					</a>
-					(2 KB)
+					(3 KB)
 				</li>
 			
 		
@@ -1603,19 +1603,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1631091277"></script>
-    <script src="/js/perfect-scrollbar.min.js?1631091277"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1631091277"></script>
-    <script src="/js/jquery.sticky.js?1631091277"></script>
-    <script src="/js/featherlight.min.js?1631091277"></script>
-    <script src="/js/highlight.pack.js?1631091277"></script>
+    <script src="/js/clipboard.min.js?1673819160"></script>
+    <script src="/js/perfect-scrollbar.min.js?1673819160"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1673819160"></script>
+    <script src="/js/jquery.sticky.js?1673819160"></script>
+    <script src="/js/featherlight.min.js?1673819160"></script>
+    <script src="/js/highlight.pack.js?1673819160"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1631091277"></script>
-    <script src="/js/learn.js?1631091277"></script>
-    <script src="/js/hugo-learn.js?1631091277"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1673819160"></script>
+    <script src="/js/learn.js?1673819160"></script>
+    <script src="/js/hugo-learn.js?1673819160"></script>
 
-    <link href="/mermaid/mermaid.css?1631091277" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1631091277"></script>
+    <link href="/mermaid/mermaid.css?1673819160" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1673819160"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

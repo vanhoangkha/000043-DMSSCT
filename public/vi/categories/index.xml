@@ -4,10 +4,6 @@
     <title>Categories on Di chuyển Database trên AWS</title>
     <link>/vi/categories/</link>
     <description>Recent content in Categories on Di chuyển Database trên AWS</description>
-    <generator>Hugo -- gohugo.io</generator>
-    
-	<atom:link href="/vi/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <generator>Hugo -- gohugo.io</generator><atom:link href="/vi/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

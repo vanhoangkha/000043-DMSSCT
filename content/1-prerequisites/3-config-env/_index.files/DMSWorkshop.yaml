@@ -1,5 +1,8 @@
 # AWS Database Migration Workshop
-# Last Updated on Sept 03, 2020 by hoomanh@
+# Last Updated on May 20, 2021 by hoomanh@
+# updated June 2022 - davegard@amazon.com
+#    updating oracle source snapshot to 19c, changed RDP security group to 127.0.0.1, & added secret mgr for db Password
+
 
 AWSTemplateFormatVersion: '2010-09-09'
 Description: CloudFormation Template for AWS Database Migration Workshop.
@@ -28,54 +31,69 @@ Metadata:
           default: "Network Configuration"
         Parameters:
           - VpcCIDR
-          - Subnet1CIDR
-          - Subnet2CIDR
-          - Subnet3CIDR
 
 Mappings:
-  RegionMap:
+  RegionMap: # 20 Regions
     us-east-1: # Virginia
-      "EC2AMI" : "ami-045d48ee4dd4f5210"  # Updated Feb 03, 2020
-      "OracleSnapshotId" : "arn:aws:rds:us-east-1:833997227572:snapshot:dms-lab-oracle-source-snapshot01"
+      "EC2AMI" : "ami-03682cbe3aba12927"  # Updated  snapshot June 10, 2022 ec2 from Feb 2020
+      "OracleSnapshotId" : "arn:aws:rds:us-east-1:833997227572:snapshot:dms-lab-oracle-source-sept2022-us-east-1"
     us-east-2: # Ohio
-      "EC2AMI" : "ami-021e119b2b955586a" # Updated Feb 03, 2020
-      "OracleSnapshotId" : "arn:aws:rds:us-east-2:833997227572:snapshot:dms-lab-oracle-source-us-east-2-snapshot01"
+      "EC2AMI" : "ami-083d84d1b53340b9d" # Updated  snapshot June 10, 2022 ec2 from Feb 2020
+      "OracleSnapshotId" : "arn:aws:rds:us-east-2:833997227572:snapshot:dms-lab-oracle-source-sept2022-us-east-2"
     us-west-2: # Oregon
-      "EC2AMI" : "ami-04f6666670bad6990" # Updated Feb 03, 2020
-      "OracleSnapshotId" : "arn:aws:rds:us-west-2:833997227572:snapshot:dms-lab-oracle-source-us-west-2-snapshot01"
+      "EC2AMI" : "ami-03693ba72dc02b388" # Updated  snapshot June 10, 2022 ec2 from Feb 2020
+      "OracleSnapshotId" : "arn:aws:rds:us-west-2:833997227572:snapshot:dms-lab-oracle-source-sept2022-us-west-2"
+    af-south-1: # Cape Town [NO AMD]
+      "EC2AMI" : "ami-06b8a1b56d1ee1741" # Updated  snapshot June 10, 2022 ec2 from Feb 2020
+      "OracleSnapshotId" : "arn:aws:rds:af-south-1:833997227572:snapshot:dms-lab-oracle-source-sept2022-af-south-1"
+    ap-east-1: # Hong Kong [NO AMD]
+      "EC2AMI" : "ami-05497e7987c6c162a" # Updated  snapshot June 10, 2022 ec2 from Feb 2020
+      "OracleSnapshotId" : "arn:aws:rds:ap-east-1:833997227572:snapshot:dms-lab-oracle-source-sept2022-ap-east-1"
     ap-south-1: # Mumbai
-      "EC2AMI" : "ami-01ef7145a99919201" # Updated Feb 03, 2020
-      "OracleSnapshotId" : "arn:aws:rds:ap-south-1:833997227572:snapshot:dms-lab-oracle-source-ap-south-1-snapshot01"
+      "EC2AMI" : "ami-05b5700bfbbd3ff1b" # Updated  snapshot June 10, 2022 ec2 from Feb 2020
+      "OracleSnapshotId" : "arn:aws:rds:ap-south-1:833997227572:snapshot:dms-lab-oracle-source-sept2022-ap-south-1"
+    ap-northeast-3: # Osaka [NO AMD]
+      "EC2AMI" : "ami-0a183533e54c9c538" # Updated  snapshot June 10, 2022 ec2 from Feb 2020
+      "OracleSnapshotId" : "arn:aws:rds:ap-northeast-3:833997227572:snapshot:dms-lab-oracle-source-sept2022-ap-northeast-3"
     ap-northeast-2: # Seoul
-      "EC2AMI" : "ami-0f84e34359512e516" # Updated Feb 03, 2020
-      "OracleSnapshotId" : "arn:aws:rds:ap-northeast-2:833997227572:snapshot:dms-lab-oracle-source-ap-northeast-2-snapshot01"
+      "EC2AMI" : "ami-0e6f29e7dcc938b67" # Updated  snapshot June 10, 2022 ec2 from Feb 2020
+      "OracleSnapshotId" : "arn:aws:rds:ap-northeast-2:833997227572:snapshot:dms-lab-oracle-source-sept2022-ap-northeast-2"
     ap-southeast-1: # Singapore
-      "EC2AMI" : "ami-08c6f23674b803e33" # Updated Feb 03, 2020
-      "OracleSnapshotId" : "arn:aws:rds:ap-southeast-1:833997227572:snapshot:dms-lab-oracle-source-ap-southeast-1-snapshot01"
+      "EC2AMI" : "ami-01a60e6c41f658d2c" # Updated  snapshot June 10, 2022 ec2 from Feb 2020
+      "OracleSnapshotId" : "arn:aws:rds:ap-southeast-1:833997227572:snapshot:dms-lab-oracle-source-sept2022-ap-southeast-1"
     ap-southeast-2: # Sydney
-      "EC2AMI" : "ami-0327c19efba4c1cc7" # Updated Feb 03, 2020
-      "OracleSnapshotId" : "arn:aws:rds:ap-southeast-2:833997227572:snapshot:dms-lab-oracle-source-ap-southeast-2-snapshot01"
+      "EC2AMI" : "ami-0ed88efdc0a63aa05" # Updated  snapshot June 10, 2022 ec2 from Feb 2020
+      "OracleSnapshotId" : "arn:aws:rds:ap-southeast-2:833997227572:snapshot:dms-lab-oracle-source-sept2022-ap-southeast-2"
     ap-northeast-1: # Tokyo
-      "EC2AMI" : "ami-071fb5f94e15b8af8" # Updated Feb 03, 2020
-      "OracleSnapshotId" : "arn:aws:rds:ap-northeast-1:833997227572:snapshot:dms-lab-oracle-source-ap-northeast-1-snapshot01"
+      "EC2AMI" : "ami-000c9e3c215cb94bb" # Updated  snapshot June 10, 2022 ec2 from Feb 2020
+      "OracleSnapshotId" : "arn:aws:rds:ap-northeast-1:833997227572:snapshot:dms-lab-oracle-source-sept2022-ap-northeast-1"
+    ca-central-1: # Canada
+      "EC2AMI" : "ami-0e8fb1647124528c8" # Updated  snapshot June 10, 2022 ec2 from Feb 2020
+      "OracleSnapshotId" : "arn:aws:rds:ca-central-1:833997227572:snapshot:dms-lab-oracle-source-sept2022-ca-central-1"
     eu-central-1: # Frankfurt
-      "EC2AMI" : "ami-009ce26e2fc8621cd" # Updated Feb 03, 2020
-      "OracleSnapshotId" : "arn:aws:rds:eu-central-1:833997227572:snapshot:dms-lab-oracle-source-eu-central-1-snapshot01"
+      "EC2AMI" : "ami-03036a83de1124b5e" # Updated  snapshot June 10, 2022 ec2 from Feb 2020
+      "OracleSnapshotId" : "arn:aws:rds:eu-central-1:833997227572:snapshot:dms-lab-oracle-source-sept2022-eu-central-1"
     eu-west-1: # Ireland
-      "EC2AMI" : "ami-075c511465e103a00" # Updated Feb 03, 2020
-      "OracleSnapshotId" : "arn:aws:rds:eu-west-1:833997227572:snapshot:dms-lab-oracle-source-eu-west-1-snapshot01"
+      "EC2AMI" : "ami-05ff3536cca06c530" # Updated  snapshot June 10, 2022 ec2 from Feb 2020
+      "OracleSnapshotId" : "arn:aws:rds:eu-west-1:833997227572:snapshot:dms-lab-oracle-source-sept2022-eu-west-1"
     eu-west-2: # London
-      "EC2AMI" : "ami-0738996a89d25ae41" # Updated Feb 03, 2020
-      "OracleSnapshotId" : "arn:aws:rds:eu-west-2:833997227572:snapshot:dms-lab-oracle-source-snapshot"
-    eu-west-3: # Paris -
-      "EC2AMI" : "ami-0a9211e0416c5d9e7" # Updated Feb 03, 2020
-      "OracleSnapshotId" : "arn:aws:rds:eu-west-3:833997227572:snapshot:dms-lab-oracle-source-snapshot"
-    eu-north-1: # Stockholm
-      "EC2AMI" : "ami-0974f8de192e11d12" # Updated Feb 03, 2020
-      "OracleSnapshotId" : "arn:aws:rds:eu-north-1:833997227572:snapshot:dms-lab-oracle-source-snapshot"
+      "EC2AMI" : "ami-0511412a16fde520d" # Updated  snapshot June 10, 2022 ec2 from Feb 2020
+      "OracleSnapshotId" : "arn:aws:rds:eu-west-2:833997227572:snapshot:dms-lab-oracle-source-sept2022-eu-west-2"
+    eu-south-1: # Milan
+      "EC2AMI" : "ami-0a52ffa5383fdf176" # Updated  snapshot June 10, 2022 ec2 from Feb 2020
+      "OracleSnapshotId" : "arn:aws:rds:eu-south-1:833997227572:snapshot:dms-lab-oracle-source-sept2022-eu-south-1"
+    eu-west-3: # Paris
+      "EC2AMI" : "ami-0d61574c241c22a9f" # Updated  snapshot June 10, 2022 ec2 from Feb 2020
+      "OracleSnapshotId" : "arn:aws:rds:eu-west-3:833997227572:snapshot:dms-lab-oracle-source-sept2022-eu-west-3"
+    eu-north-1: # Stockholm [NO AMD]
+      "EC2AMI" : "ami-0e1e14ca5aad3f5ed" # Updated snapshot June 10, 2022 ec2 from Feb 2020
+      "OracleSnapshotId" : "arn:aws:rds:eu-north-1:833997227572:snapshot:dms-lab-oracle-source-sept2022-eu-north-1"
+    me-south-1: # Bahrain [NO AMD]
+      "EC2AMI" : "ami-0a3ba20d88f9980a4" # Updated snapshot June 10, 2022 ec2 from Feb 2020
+      "OracleSnapshotId" : "arn:aws:rds:me-south-1:833997227572:snapshot:dms-lab-oracle-source-sept2022-me-south-1"
     sa-east-1: # Sao Paulo
-      "EC2AMI" : "ami-0c6dc49bd206d2bcf" # Updated Feb 03, 2020
-      "OracleSnapshotId" : "arn:aws:rds:sa-east-1:833997227572:snapshot:dms-lab-oracle-source-snapshot"
+      "EC2AMI" : "ami-083026c2d95369054" # Updated snapshot June 10, 2022 ec2 from Feb 2020
+      "OracleSnapshotId" : "arn:aws:rds:sa-east-1:833997227572:snapshot:dms-lab-oracle-source-sept2022-sa-east-1"
 
 Parameters:
   LabType:
@@ -94,52 +112,26 @@ Parameters:
     Type: AWS::EC2::KeyPair::KeyName
     ConstraintDescription: must be the name of an existing EC2 KeyPair.
   VpcCIDR:
-    Description: Enter the VPC CIDR range in the form x.x.x.x/16
+    Description: Enter the VPC CIDR range in the form x.x.x.x/16.
     Type: String
     MinLength: 9
     MaxLength: 18
     AllowedPattern: "(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})/(\\d{1,2})"
-    ConstraintDescription: Must be a valid CIDR range in the form x.x.x.x/16
+    ConstraintDescription: Must be a valid CIDR range in the form x.x.x.x/16.
     Default: 10.20.0.0/16
-  Subnet1CIDR:
-    Description: Enter the Subnet 1 CIDR range in the form x.x.x.x/22
-    Type: String
-    MinLength: 9
-    MaxLength: 18
-    AllowedPattern: "(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})/(\\d{1,2})"
-    ConstraintDescription: Must be a valid CIDR range in the form x.x.x.x/22
-    Default: 10.20.1.0/24
-  Subnet2CIDR:
-    Description: Enter the Subnet 2 CIDR range in the form x.x.x.x/22
-    Type: String
-    MinLength: 9
-    MaxLength: 18
-    AllowedPattern: "(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})/(\\d{1,2})"
-    ConstraintDescription: Must be a valid CIDR range in the form x.x.x.x/22
-    Default: 10.20.2.0/24
-  Subnet3CIDR:
-    Description: Enter the Subnet 3 CIDR range in the form x.x.x.x/22
-    Type: String
-    MinLength: 9
-    MaxLength: 18
-    AllowedPattern: "(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})/(\\d{1,2})"
-    ConstraintDescription: Must be a valid CIDR range in the form x.x.x.x/22
-    Default: 10.20.3.0/24
   EC2ServerInstanceType:
     Description: Amazon EC2 Instance Type
     Type: String
-    Default: m5a.xlarge
+    Default: m5.xlarge
     AllowedValues:
       - m5.large
       - m5.xlarge
       - m5.2xlarge
       - m5.4xlarge
-      - m5.8xlarge
       - m5a.large
       - m5a.xlarge
       - m5a.2xlarge
       - m5a.4xlarge
-      - m5a.8xlarge
     ConstraintDescription: Must be a valid EC2 instance type.
   RDSInstanceType:
     Description: Amazon RDS Aurora Instance Type
@@ -150,12 +142,6 @@ Parameters:
       - db.r5.xlarge
       - db.r5.2xlarge
       - db.r5.4xlarge
-      - db.r5.12xlarge
-      - db.r4.large
-      - db.r4.xlarge
-      - db.r4.2xlarge
-      - db.r4.4xlarge
-      - db.r4.8xlarge
     ConstraintDescription: Must be a valid Amazon RDS instance type.
 
 Conditions:
@@ -186,8 +172,7 @@ Resources:
     Type: AWS::EC2::Subnet
     Properties:
       VpcId: !Ref DmsVpc
-      CidrBlock:
-        Ref: Subnet1CIDR
+      CidrBlock: !Select [ 0, !Cidr [ !GetAtt DmsVpc.CidrBlock, 3, 8 ]]
       AvailabilityZone: !Select [0, !GetAZs ]
       Tags:
       - Key: Name
@@ -200,8 +185,7 @@ Resources:
     Type: AWS::EC2::Subnet
     Properties:
       VpcId: !Ref DmsVpc
-      CidrBlock:
-        Ref: Subnet2CIDR
+      CidrBlock: !Select [ 1, !Cidr [ !GetAtt DmsVpc.CidrBlock, 3, 8 ]]
       AvailabilityZone: !Select [1, !GetAZs ]
       Tags:
       - Key: Name
@@ -214,8 +198,7 @@ Resources:
     Type: AWS::EC2::Subnet
     Properties:
       VpcId: !Ref DmsVpc
-      CidrBlock:
-        Ref: Subnet3CIDR
+      CidrBlock: !Select [ 2, !Cidr [ !GetAtt DmsVpc.CidrBlock, 3, 8 ]]
       AvailabilityZone: !Select [2, !GetAZs ]
       Tags:
       - Key: Name
@@ -280,6 +263,30 @@ Resources:
     Properties:
       SubnetId: !Ref Subnet3
       RouteTableId: !Ref RouteTable
+  S3GatewayEndpoint:
+    Type: 'AWS::EC2::VPCEndpoint'
+    Properties:
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal: '*'
+            Action:
+              - 's3:GetObject'
+              - 's3:PutObject'
+              - 's3:DeleteObject'
+              - 's3:PutObjectTagging'
+              - 's3:ListBucket'
+            Resource:
+              - 'arn:aws:s3:::*'
+            Condition:
+              StringEquals:
+                aws:sourceVpc: !Ref DmsVpc
+      RouteTableIds:
+        - !Ref RouteTable
+#        - !Ref routetableB
+      ServiceName: !Sub 'com.amazonaws.${AWS::Region}.s3'
+      VpcId: !Ref DmsVpc
   EC2Instance:
     Type: AWS::EC2::Instance
     Properties:
@@ -327,7 +334,7 @@ Resources:
       - IpProtocol: tcp
         FromPort: '3389'
         ToPort: '3389'
-        CidrIp: 0.0.0.0/0
+        CidrIp: 127.0.0.1/32
         Description: Allows RDP access to EC2 Instance
       - IpProtocol: tcp
         FromPort: '1521'
@@ -349,9 +356,29 @@ Resources:
         ToPort: '3306'
         CidrIp: !Ref VpcCIDR
         Description: Allows Amazon RDS Aurora (MySQL) Access
+
+  DMSDBSecret:
+    Type: 'AWS::SecretsManager::Secret'
+    Properties:
+      Name: 
+        Fn::Join:
+          - "-"
+          - - Ref: AWS::StackName
+            - DMSDBSecret
+      Description: This secret has a hardcoded password in SecretString
+      SecretString: '{"username":"dbmaster","password":"dbmaster123","SQLServerusername":"awssct","SQLServerpassword":"Password1"}'
+      Tags:
+      - Key: Name
+        Value:
+          Fn::Join:
+          - "-"
+          - - Ref: AWS::StackName
+            - DMSDBSecret
+
   SourceOracleDB:
     Condition: Create-Oracle-Environment
     Type: AWS::RDS::DBInstance
+    DeletionPolicy: Delete
     Properties:
       Tags:
       - Key: Name
@@ -361,13 +388,13 @@ Resources:
           - - Ref: AWS::StackName
             - SourceOracleDB
       DBName: 'OracleDB'
-      AllocatedStorage: '100'
+      AllocatedStorage: '400'
       StorageType: gp2
       MasterUsername: 'dbmaster'
       MasterUserPassword: 'dbmaster123'
       DBInstanceClass: !Ref RDSInstanceType
       Engine: oracle-ee
-      EngineVersion: '12.1.0.2.v6'
+      EngineVersion: '19.0.0.0.ru-2022-04.rur-2022-04.r1'
       LicenseModel: bring-your-own-license
       PubliclyAccessible: false
       AvailabilityZone:
@@ -446,6 +473,7 @@ Resources:
   AuroraPostgresqlCluster:
     Condition: Create-Oracle-to-AuroraPostgreSQL-Environment
     Type: AWS::RDS::DBCluster
+    DeletionPolicy: Delete
     Properties:
       Tags:
       - Key: Name
@@ -460,33 +488,19 @@ Resources:
       - Fn::GetAtt:
         - RDSSecurityGroup
         - GroupId
-      Engine: aurora-postgresql
-      EngineVersion: '11.7'
       DatabaseName: 'AuroraDB'
-      DBClusterParameterGroupName: default.aurora-postgresql11
+      Engine: aurora-postgresql
+      EngineVersion: '13.7'
+      DBClusterParameterGroupName: default.aurora-postgresql13
       MasterUsername: 'dbmaster'
       MasterUserPassword: 'dbmaster123'
       Port: '5432'
-      BackupRetentionPeriod: '7'
+      BackupRetentionPeriod: '1'
     DependsOn: RDSSecurityGroup
-  AuroraPostgresqlParameterGroup:
-    Condition: Create-Oracle-to-AuroraPostgreSQL-Environment
-    Type: AWS::RDS::DBParameterGroup
-    Properties:
-      Tags:
-      - Key: Name
-        Value:
-          Fn::Join:
-          - "-"
-          - - Ref: AWS::StackName
-            - AuroraPostgresqlParameterGroup
-      Description: Aurora PostgreSQL DBParameterGroup
-      Family: aurora-postgresql11
-      Parameters:
-        shared_preload_libraries: pg_stat_statements
   AuroraPostgresqlInstance:
     Condition: Create-Oracle-to-AuroraPostgreSQL-Environment
     Type: AWS::RDS::DBInstance
+    DeletionPolicy: Delete
     Properties:
       Tags:
       - Key: Name
@@ -503,9 +517,8 @@ Resources:
         - - Ref: AWS::StackName
           - AuroraPostgreSQLInstance
       Engine: aurora-postgresql
-      EngineVersion: '11.7'
-      DBParameterGroupName:
-        Ref: AuroraPostgresqlParameterGroup
+      EngineVersion: '13.7'
+      DBParameterGroupName: default.aurora-postgresql13
       DBClusterIdentifier:
         Ref: AuroraPostgresqlCluster
       DBSubnetGroupName:
@@ -517,6 +530,7 @@ Resources:
   AuroraPostgresqlCluster2:
     Condition: Create-SQLServer-to-AuroraPostgreSQL-Environment
     Type: AWS::RDS::DBCluster
+    DeletionPolicy: Delete
     Properties:
       Tags:
       - Key: Name
@@ -531,33 +545,19 @@ Resources:
       - Fn::GetAtt:
         - RDSSecurityGroup
         - GroupId
-      Engine: aurora-postgresql
-      EngineVersion: '10.7'
       DatabaseName: 'AuroraDB'
-      DBClusterParameterGroupName: default.aurora-postgresql10
+      Engine: aurora-postgresql
+      EngineVersion: '13.7'
+      DBClusterParameterGroupName: default.aurora-postgresql13
       MasterUsername: 'dbmaster'
       MasterUserPassword: 'dbmaster123'
       Port: '5432'
       BackupRetentionPeriod: '1'
     DependsOn: RDSSecurityGroup
-  AuroraPostgresqlParameterGroup2:
-    Condition: Create-SQLServer-to-AuroraPostgreSQL-Environment
-    Type: AWS::RDS::DBParameterGroup
-    Properties:
-      Tags:
-      - Key: Name
-        Value:
-          Fn::Join:
-          - "-"
-          - - Ref: AWS::StackName
-            - AuroraPostgresqlParameterGroup2
-      Description: Aurora PostgreSQL DBParameterGroup
-      Family: aurora-postgresql10
-      Parameters:
-        shared_preload_libraries: pg_stat_statements
   AuroraPostgresqlInstance2:
     Condition: Create-SQLServer-to-AuroraPostgreSQL-Environment
     Type: AWS::RDS::DBInstance
+    DeletionPolicy: Delete
     Properties:
       Tags:
       - Key: Name
@@ -574,9 +574,8 @@ Resources:
         - - Ref: AWS::StackName
           - AuroraPostgreSQLInstance2
       Engine: aurora-postgresql
-      EngineVersion: '10.7'
-      DBParameterGroupName:
-        Ref: AuroraPostgresqlParameterGroup2
+      EngineVersion: '13.7'
+      DBParameterGroupName: default.aurora-postgresql13
       DBClusterIdentifier:
         Ref: AuroraPostgresqlCluster2
       DBSubnetGroupName:
@@ -588,6 +587,7 @@ Resources:
   AuroraMySQLCluster:
     Condition: Create-SQLServer-to-AuroraMySQL-Environment
     Type: AWS::RDS::DBCluster
+    DeletionPolicy: Delete
     Properties:
       Tags:
       - Key: Name
@@ -604,13 +604,14 @@ Resources:
         - GroupId
       DatabaseName: AuroraMySQL
       Engine: aurora-mysql
-      EngineVersion: 5.7.12
+      EngineVersion: 5.7.mysql_aurora.2.07.4
       MasterUsername: awssct
       MasterUserPassword: Password1
     DependsOn: RDSSecurityGroup
   AuroraMySQLInstance:
     Condition: Create-SQLServer-to-AuroraMySQL-Environment
     Type: AWS::RDS::DBInstance
+    DeletionPolicy: Delete
     Properties:
       Tags:
       - Key: Name
@@ -630,12 +631,13 @@ Resources:
         Ref: DBSubnetGroup
       DBInstanceClass: !Ref RDSInstanceType
       Engine: aurora-mysql
-      EngineVersion: 5.7.12
+      EngineVersion: 5.7.mysql_aurora.2.07.4
       LicenseModel: general-public-license
       PubliclyAccessible: 'false'
   TargetSQLServer:
     Condition: Create-SQLServer-to-RDSSQLServer-Environment
     Type: AWS::RDS::DBInstance
+    DeletionPolicy: Delete
     Properties:
       Tags:
       - Key: Name
@@ -657,7 +659,7 @@ Resources:
           - TargetSQLServer
       LicenseModel: license-included
       Engine: sqlserver-se
-      EngineVersion: 14.00.3049.1.v1
+      EngineVersion: 15.00.4073.23.v1
       DBInstanceClass: !Ref RDSInstanceType
       AllocatedStorage: '100'
       Iops: '2000'
@@ -669,6 +671,7 @@ Resources:
   TargetOracleDB:
     Condition: Create-Oracle-to-RDSOracle-Environment
     Type: AWS::RDS::DBInstance
+    DeletionPolicy: Delete
     Properties:
       Tags:
       - Key: Name
@@ -678,13 +681,13 @@ Resources:
           - - Ref: AWS::StackName
             - TargetOracleDB
       DBName: 'TargetDB'
-      AllocatedStorage: '100'
+      AllocatedStorage: '400'
       StorageType: gp2
       MasterUsername: 'dbmaster'
       MasterUserPassword: 'dbmaster123'
       DBInstanceClass: !Ref RDSInstanceType
       Engine: oracle-ee
-      EngineVersion: '12.1.0.2.v6'
+      EngineVersion: '19.0.0.0.ru-2022-04.rur-2022-04.r1'
       LicenseModel: bring-your-own-license
       PubliclyAccessible: false
       AvailabilityZone:
@@ -705,6 +708,20 @@ Resources:
           - TargetOracleDB
 
 Outputs:
+
+  DMSDBSecretU:
+    Description:  DB Username
+    Value: dbmaster
+  DMSDBSecretP:
+    Description:  DB Pwd
+    Value: dbmaster123
+  DMSDBSecretUSQLSERVER:
+    Description:  DB Username SQL Server
+    Value: awssct
+  DMSDBSecretPSQLSERVER:
+    Description:  DB Pwd SQL Server
+    Value: Password1
+
   SourceEC2PublicDNS:
     Description: Public DNS enpoint for the EC2 instance
     Value:

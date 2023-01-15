@@ -5,10 +5,6 @@
     <link>/2-oracle-aurora/2-migration/3-config-target-db/</link>
     <description>Recent content in Configure the Target DB on AWS Database Migration</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 01 Jan 1970 07:33:40 +0700</lastBuildDate>
-    
-	<atom:link href="/2-oracle-aurora/2-migration/3-config-target-db/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 01 Jan 1970 07:33:40 +0700</lastBuildDate><atom:link href="/2-oracle-aurora/2-migration/3-config-target-db/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

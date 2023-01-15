@@ -19,7 +19,7 @@ pre = "<b>1.3. </b>"
 
 ![Environment](/images/1/4.png?width=90pc)
 
-2. Chọn **Template is ready**, và chọn **Upload a template file** để tải lên template bài thực hành. Sau đó chọn **Choose file** và tải lên [**DMSWorkshop.yaml**](https://dms-immersionday.workshop.aws/code/DMSWorkshop.yaml). Chọn **Next**.
+2. Chọn **Template is ready**, và chọn **Upload a template file** để tải lên template bài thực hành. Sau đó chọn **Choose file** và tải lên [**DMSWorkshop.yaml**](https://static.us-east-1.prod.workshops.aws/public/28fde2bd-4a13-4b43-aebe-0845c34842f3/static/code/DMSWorkshop.yaml). Chọn **Next**.
 
 {{%attachments title="Template" pattern=".*(yaml)"/%}}
 

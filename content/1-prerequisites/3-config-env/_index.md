@@ -19,7 +19,7 @@ In this step, you will use a **CloudFormation (CFN)** template to deploy the inf
 
 ![Environment](/images/1/4.png?width=90pc)
 
-2. Select **Template is ready**, and choose **Upload a template file** as the source template. Then, click on **Choose file** and upload the [**DMSWorkshop.yaml**](https://dms-immersionday.workshop.aws/code/DMSWorkshop.yaml). Click **Next**.
+2. Select **Template is ready**, and choose **Upload a template file** as the source template. Then, click on **Choose file** and upload the [**DMSWorkshop.yaml**](https://static.us-east-1.prod.workshops.aws/public/28fde2bd-4a13-4b43-aebe-0845c34842f3/static/code/DMSWorkshop.yaml). Click **Next**.
 
 {{%attachments title="Template" pattern=".*(yaml)"/%}}
 

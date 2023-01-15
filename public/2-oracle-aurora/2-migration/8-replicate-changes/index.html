@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.69.0" />
+    <meta name="generator" content="Hugo 0.99.1" />
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Replicate Data Changes :: AWS Database Migration</title>
 
     
-    <link href="/css/nucleus.css?1631091276" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1631091276" rel="stylesheet">
-    <link href="/css/hybrid.css?1631091276" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1631091276" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1631091276" rel="stylesheet">
-    <link href="/css/auto-complete.css?1631091276" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1631091276" rel="stylesheet">
-    <link href="/css/theme.css?1631091276" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1631091276" rel="stylesheet">
+    <link href="/css/nucleus.css?1673819160" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1673819160" rel="stylesheet">
+    <link href="/css/hybrid.css?1673819160" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1673819160" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1673819160" rel="stylesheet">
+    <link href="/css/auto-complete.css?1673819160" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1673819160" rel="stylesheet">
+    <link href="/css/theme.css?1673819160" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1673819160" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1631091276" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1673819160" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1631091276"></script>
+    <script src="/js/jquery-3.3.1.min.js?1673819160"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1631091276"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1631091276"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1673819160"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1673819160"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1631091276"></script>
+<script type="text/javascript" src="/js/search.js?1673819160"></script>
 
     
   </div>
@@ -615,7 +615,7 @@
   
     
     <li data-nav-id="/2-oracle-aurora/2-migration/8-replicate-changes/" title="Replicate Data Changes" class="dd-item 
-        
+        parent
         active
         
         ">
@@ -945,7 +945,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>07-09-2021</font></i>
+        <i><font color=orange>16-01-2023</font></i>
     </left>
     <left>
         <br>
@@ -1060,58 +1060,58 @@
 <table>
 <thead>
 <tr>
-<th align="center">Parameter</th>
-<th align="center">Value</th>
+<th style="text-align:center">Parameter</th>
+<th style="text-align:center">Value</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">Task identifier</td>
-<td align="center">oracle-replication-task</td>
+<td style="text-align:center">Task identifier</td>
+<td style="text-align:center">oracle-replication-task</td>
 </tr>
 <tr>
-<td align="center">Replication instance</td>
-<td align="center">oracle-replication</td>
+<td style="text-align:center">Replication instance</td>
+<td style="text-align:center">oracle-replication</td>
 </tr>
 <tr>
-<td align="center">Source database endpoint</td>
-<td align="center">oracle-source</td>
+<td style="text-align:center">Source database endpoint</td>
+<td style="text-align:center">oracle-source</td>
 </tr>
 <tr>
-<td align="center">Target database endpoint</td>
-<td align="center">aurora-target</td>
+<td style="text-align:center">Target database endpoint</td>
+<td style="text-align:center">aurora-target</td>
 </tr>
 <tr>
-<td align="center">Migration type</td>
-<td align="center">Replicate data changes only</td>
+<td style="text-align:center">Migration type</td>
+<td style="text-align:center">Replicate data changes only</td>
 </tr>
 <tr>
-<td align="center">CDC stop mode</td>
-<td align="center">Don’t use custom CDC stop mode</td>
+<td style="text-align:center">CDC stop mode</td>
+<td style="text-align:center">Don’t use custom CDC stop mode</td>
 </tr>
 <tr>
-<td align="center">Target table preparation mode</td>
-<td align="center">Do nothing</td>
+<td style="text-align:center">Target table preparation mode</td>
+<td style="text-align:center">Do nothing</td>
 </tr>
 <tr>
-<td align="center">Stop task after full load completes</td>
-<td align="center">Don’t stop</td>
+<td style="text-align:center">Stop task after full load completes</td>
+<td style="text-align:center">Don’t stop</td>
 </tr>
 <tr>
-<td align="center">Include LOB columns in replication</td>
-<td align="center">Limited LOB mode</td>
+<td style="text-align:center">Include LOB columns in replication</td>
+<td style="text-align:center">Limited LOB mode</td>
 </tr>
 <tr>
-<td align="center">Max LOB size (KB)</td>
-<td align="center">32</td>
+<td style="text-align:center">Max LOB size (KB)</td>
+<td style="text-align:center">32</td>
 </tr>
 <tr>
-<td align="center">Enable validation</td>
-<td align="center">Unchecked</td>
+<td style="text-align:center">Enable validation</td>
+<td style="text-align:center">Unchecked</td>
 </tr>
 <tr>
-<td align="center">Enable CloudWatch logs</td>
-<td align="center">Checked</td>
+<td style="text-align:center">Enable CloudWatch logs</td>
+<td style="text-align:center">Checked</td>
 </tr>
 </tbody>
 </table>
@@ -1130,16 +1130,16 @@ Now you are going to simulate a transaction to the source database by updating t
 <li>Use <strong>Oracle SQL Developer</strong> connect to the source Oracle RDS.</li>
 <li>Open a <strong>New Query</strong> window and <strong>execute</strong> the following statement to insert 5 new sports into the <code>sport_type</code> table:</li>
 </ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">ALL</span>
-<span style="color:#66d9ef">INTO</span> dms_sample.sport_type (name,description) <span style="color:#66d9ef">VALUES</span> (<span style="color:#e6db74">&#39;hockey&#39;</span>, <span style="color:#e6db74">&#39;A sport in which two teams play against each other by trying to more a puck into the opponents goal using a hockey stick&#39;</span>)
-<span style="color:#66d9ef">INTO</span> dms_sample.sport_type (name,description) <span style="color:#66d9ef">VALUES</span> (<span style="color:#e6db74">&#39;basketball&#39;</span>, <span style="color:#e6db74">&#39;A sport in which two teams of five players each that oppose one another shoot a basketball through the defenders hoop&#39;</span>)
-<span style="color:#66d9ef">INTO</span> dms_sample.sport_type (name,description) <span style="color:#66d9ef">VALUES</span> (<span style="color:#e6db74">&#39;soccer&#39;</span>,<span style="color:#e6db74">&#39;A sport played with a spherical ball between two teams of eleven players&#39;</span>)
-<span style="color:#66d9ef">INTO</span> dms_sample.sport_type (name,description) <span style="color:#66d9ef">VALUES</span> (<span style="color:#e6db74">&#39;volleyball&#39;</span>,<span style="color:#e6db74">&#39;two teams of six players are separated by a net and each team tries to score by grounding a ball on the others court&#39;</span>)
-<span style="color:#66d9ef">INTO</span> dms_sample.sport_type (name,description) <span style="color:#66d9ef">VALUES</span> (<span style="color:#e6db74">&#39;cricket&#39;</span>,<span style="color:#e6db74">&#39;A bat-and-ball game between two teams of eleven players on a field with a wicket at each end&#39;</span>)
-<span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> dual; 
-<span style="color:#66d9ef">COMMIT</span>;
-<span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> dms_sample.sport_type; 
-</code></pre></div><p><img src="/images/2/46.png?width=90pc" alt="Replicate"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">ALL</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INTO</span> dms_sample.sport_type (name,description) <span style="color:#66d9ef">VALUES</span> (<span style="color:#e6db74">&#39;hockey&#39;</span>, <span style="color:#e6db74">&#39;A sport in which two teams play against each other by trying to more a puck into the opponents goal using a hockey stick&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INTO</span> dms_sample.sport_type (name,description) <span style="color:#66d9ef">VALUES</span> (<span style="color:#e6db74">&#39;basketball&#39;</span>, <span style="color:#e6db74">&#39;A sport in which two teams of five players each that oppose one another shoot a basketball through the defenders hoop&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INTO</span> dms_sample.sport_type (name,description) <span style="color:#66d9ef">VALUES</span> (<span style="color:#e6db74">&#39;soccer&#39;</span>,<span style="color:#e6db74">&#39;A sport played with a spherical ball between two teams of eleven players&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INTO</span> dms_sample.sport_type (name,description) <span style="color:#66d9ef">VALUES</span> (<span style="color:#e6db74">&#39;volleyball&#39;</span>,<span style="color:#e6db74">&#39;two teams of six players are separated by a net and each team tries to score by grounding a ball on the others court&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INTO</span> dms_sample.sport_type (name,description) <span style="color:#66d9ef">VALUES</span> (<span style="color:#e6db74">&#39;cricket&#39;</span>,<span style="color:#e6db74">&#39;A bat-and-ball game between two teams of eleven players on a field with a wicket at each end&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> dual; 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">COMMIT</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> dms_sample.sport_type; 
+</span></span></code></pre></div><p><img src="/images/2/46.png?width=90pc" alt="Replicate"></p>
 <ol start="8">
 <li>Repeat <a href="../7-inspect-content/"><strong>steps 1,2 - Inspect Target Database</strong></a> as described earlier to inspect the content of <code>sport_type</code> table in the target database.</li>
 </ol>
@@ -1650,19 +1650,19 @@ Now you are going to simulate a transaction to the source database by updating t
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1631091276"></script>
-    <script src="/js/perfect-scrollbar.min.js?1631091276"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1631091276"></script>
-    <script src="/js/jquery.sticky.js?1631091276"></script>
-    <script src="/js/featherlight.min.js?1631091276"></script>
-    <script src="/js/highlight.pack.js?1631091276"></script>
+    <script src="/js/clipboard.min.js?1673819160"></script>
+    <script src="/js/perfect-scrollbar.min.js?1673819160"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1673819160"></script>
+    <script src="/js/jquery.sticky.js?1673819160"></script>
+    <script src="/js/featherlight.min.js?1673819160"></script>
+    <script src="/js/highlight.pack.js?1673819160"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1631091276"></script>
-    <script src="/js/learn.js?1631091276"></script>
-    <script src="/js/hugo-learn.js?1631091276"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1673819160"></script>
+    <script src="/js/learn.js?1673819160"></script>
+    <script src="/js/hugo-learn.js?1673819160"></script>
 
-    <link href="/mermaid/mermaid.css?1631091276" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1631091276"></script>
+    <link href="/mermaid/mermaid.css?1673819160" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1673819160"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

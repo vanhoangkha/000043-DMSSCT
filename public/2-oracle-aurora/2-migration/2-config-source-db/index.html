@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.69.0" />
+    <meta name="generator" content="Hugo 0.99.1" />
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Configure the Source DB :: AWS Database Migration</title>
 
     
-    <link href="/css/nucleus.css?1631091276" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1631091276" rel="stylesheet">
-    <link href="/css/hybrid.css?1631091276" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1631091276" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1631091276" rel="stylesheet">
-    <link href="/css/auto-complete.css?1631091276" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1631091276" rel="stylesheet">
-    <link href="/css/theme.css?1631091276" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1631091276" rel="stylesheet">
+    <link href="/css/nucleus.css?1673819160" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1673819160" rel="stylesheet">
+    <link href="/css/hybrid.css?1673819160" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1673819160" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1673819160" rel="stylesheet">
+    <link href="/css/auto-complete.css?1673819160" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1673819160" rel="stylesheet">
+    <link href="/css/theme.css?1673819160" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1673819160" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1631091276" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1673819160" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1631091276"></script>
+    <script src="/js/jquery-3.3.1.min.js?1673819160"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1631091276"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1631091276"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1673819160"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1673819160"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1631091276"></script>
+<script type="text/javascript" src="/js/search.js?1673819160"></script>
 
     
   </div>
@@ -447,7 +447,7 @@
   
     
     <li data-nav-id="/2-oracle-aurora/2-migration/2-config-source-db/" title="Configure the Source DB" class="dd-item 
-        
+        parent
         active
         
         ">
@@ -945,7 +945,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>07-09-2021</font></i>
+        <i><font color=orange>16-01-2023</font></i>
     </left>
     <left>
         <br>
@@ -1065,61 +1065,61 @@
 <ol start="2">
 <li>Next, execute the below statements to grant the following privileges to the <strong>AWS DMS user</strong> to access the source <strong>Oracle endpoint</strong>:</li>
 </ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">ANY</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#66d9ef">to</span> DMS_USER;
-<span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">on</span> ALL_VIEWS <span style="color:#66d9ef">to</span> DMS_USER;
-<span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">ANY</span> <span style="color:#66d9ef">TRANSACTION</span> <span style="color:#66d9ef">to</span> DMS_USER;
-<span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">on</span> DBA_TABLESPACES <span style="color:#66d9ef">to</span> DMS_USER;
-<span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">on</span> ALL_TAB_PARTITIONS <span style="color:#66d9ef">to</span> DMS_USER;
-<span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">on</span> ALL_INDEXES <span style="color:#66d9ef">to</span> DMS_USER;
-<span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">on</span> ALL_OBJECTS <span style="color:#66d9ef">to</span> DMS_USER;
-<span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">on</span> ALL_TABLES <span style="color:#66d9ef">to</span> DMS_USER;
-<span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">on</span> ALL_USERS <span style="color:#66d9ef">to</span> DMS_USER;
-<span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">on</span> ALL_CATALOG <span style="color:#66d9ef">to</span> DMS_USER;
-<span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">on</span> ALL_CONSTRAINTS <span style="color:#66d9ef">to</span> DMS_USER;
-<span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">on</span> ALL_CONS_COLUMNS <span style="color:#66d9ef">to</span> DMS_USER;
-<span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">on</span> ALL_TAB_COLS <span style="color:#66d9ef">to</span> DMS_USER;
-<span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">on</span> ALL_IND_COLUMNS <span style="color:#66d9ef">to</span> DMS_USER;
-<span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">on</span> ALL_LOG_GROUPS <span style="color:#66d9ef">to</span> DMS_USER;
-<span style="color:#66d9ef">GRANT</span> LOGMINING <span style="color:#66d9ef">TO</span> DMS_USER;
-</code></pre></div><p><img src="/images/2/28.png?width=90pc" alt="Source Database"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">ANY</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#66d9ef">to</span> DMS_USER;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">on</span> ALL_VIEWS <span style="color:#66d9ef">to</span> DMS_USER;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">ANY</span> <span style="color:#66d9ef">TRANSACTION</span> <span style="color:#66d9ef">to</span> DMS_USER;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">on</span> DBA_TABLESPACES <span style="color:#66d9ef">to</span> DMS_USER;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">on</span> ALL_TAB_PARTITIONS <span style="color:#66d9ef">to</span> DMS_USER;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">on</span> ALL_INDEXES <span style="color:#66d9ef">to</span> DMS_USER;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">on</span> ALL_OBJECTS <span style="color:#66d9ef">to</span> DMS_USER;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">on</span> ALL_TABLES <span style="color:#66d9ef">to</span> DMS_USER;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">on</span> ALL_USERS <span style="color:#66d9ef">to</span> DMS_USER;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">on</span> ALL_CATALOG <span style="color:#66d9ef">to</span> DMS_USER;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">on</span> ALL_CONSTRAINTS <span style="color:#66d9ef">to</span> DMS_USER;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">on</span> ALL_CONS_COLUMNS <span style="color:#66d9ef">to</span> DMS_USER;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">on</span> ALL_TAB_COLS <span style="color:#66d9ef">to</span> DMS_USER;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">on</span> ALL_IND_COLUMNS <span style="color:#66d9ef">to</span> DMS_USER;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">on</span> ALL_LOG_GROUPS <span style="color:#66d9ef">to</span> DMS_USER;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GRANT</span> LOGMINING <span style="color:#66d9ef">TO</span> DMS_USER;
+</span></span></code></pre></div><p><img src="/images/2/28.png?width=90pc" alt="Source Database"></p>
 <ol start="3">
 <li>In addition, run the following:</li>
 </ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">exec rdsadmin.rdsadmin_util.grant_sys_object<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;V_$ARCHIVED_LOG&#39;</span>,<span style="color:#e6db74">&#39;DMS_USER&#39;</span>,<span style="color:#e6db74">&#39;SELECT&#39;</span><span style="color:#f92672">)</span>;
-exec rdsadmin.rdsadmin_util.grant_sys_object<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;V_$LOG&#39;</span>,<span style="color:#e6db74">&#39;DMS_USER&#39;</span>,<span style="color:#e6db74">&#39;SELECT&#39;</span><span style="color:#f92672">)</span>;
-exec rdsadmin.rdsadmin_util.grant_sys_object<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;V_$LOGFILE&#39;</span>,<span style="color:#e6db74">&#39;DMS_USER&#39;</span>,<span style="color:#e6db74">&#39;SELECT&#39;</span><span style="color:#f92672">)</span>;
-exec rdsadmin.rdsadmin_util.grant_sys_object<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;V_$DATABASE&#39;</span>,<span style="color:#e6db74">&#39;DMS_USER&#39;</span>,<span style="color:#e6db74">&#39;SELECT&#39;</span><span style="color:#f92672">)</span>;
-exec rdsadmin.rdsadmin_util.grant_sys_object<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;V_$THREAD&#39;</span>,<span style="color:#e6db74">&#39;DMS_USER&#39;</span>,<span style="color:#e6db74">&#39;SELECT&#39;</span><span style="color:#f92672">)</span>;
-exec rdsadmin.rdsadmin_util.grant_sys_object<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;V_$PARAMETER&#39;</span>,<span style="color:#e6db74">&#39;DMS_USER&#39;</span>,<span style="color:#e6db74">&#39;SELECT&#39;</span><span style="color:#f92672">)</span>;
-exec rdsadmin.rdsadmin_util.grant_sys_object<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;V_$NLS_PARAMETERS&#39;</span>,<span style="color:#e6db74">&#39;DMS_USER&#39;</span>,<span style="color:#e6db74">&#39;SELECT&#39;</span><span style="color:#f92672">)</span>;
-exec rdsadmin.rdsadmin_util.grant_sys_object<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;V_$TIMEZONE_NAMES&#39;</span>,<span style="color:#e6db74">&#39;DMS_USER&#39;</span>,<span style="color:#e6db74">&#39;SELECT&#39;</span><span style="color:#f92672">)</span>;
-exec rdsadmin.rdsadmin_util.grant_sys_object<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;V_$TRANSACTION&#39;</span>,<span style="color:#e6db74">&#39;DMS_USER&#39;</span>,<span style="color:#e6db74">&#39;SELECT&#39;</span><span style="color:#f92672">)</span>;
-exec rdsadmin.rdsadmin_util.grant_sys_object<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;DBA_REGISTRY&#39;</span>,<span style="color:#e6db74">&#39;DMS_USER&#39;</span>,<span style="color:#e6db74">&#39;SELECT&#39;</span><span style="color:#f92672">)</span>;
-exec rdsadmin.rdsadmin_util.grant_sys_object<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;OBJ$&#39;</span>,<span style="color:#e6db74">&#39;DMS_USER&#39;</span>,<span style="color:#e6db74">&#39;SELECT&#39;</span><span style="color:#f92672">)</span>;
-exec rdsadmin.rdsadmin_util.grant_sys_object<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;ALL_ENCRYPTED_COLUMNS&#39;</span>,<span style="color:#e6db74">&#39;DMS_USER&#39;</span>,<span style="color:#e6db74">&#39;SELECT&#39;</span><span style="color:#f92672">)</span>;
-exec rdsadmin.rdsadmin_util.grant_sys_object<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;V_$LOGMNR_LOGS&#39;</span>,<span style="color:#e6db74">&#39;DMS_USER&#39;</span>,<span style="color:#e6db74">&#39;SELECT&#39;</span><span style="color:#f92672">)</span>;
-exec rdsadmin.rdsadmin_util.grant_sys_object<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;V_$LOGMNR_CONTENTS&#39;</span>,<span style="color:#e6db74">&#39;DMS_USER&#39;</span>,<span style="color:#e6db74">&#39;SELECT&#39;</span><span style="color:#f92672">)</span>;
-exec rdsadmin.rdsadmin_util.grant_sys_object<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;DBMS_LOGMNR&#39;</span>,<span style="color:#e6db74">&#39;DMS_USER&#39;</span>,<span style="color:#e6db74">&#39;EXECUTE&#39;</span><span style="color:#f92672">)</span>;
-</code></pre></div><p><img src="/images/2/29.png?width=90pc" alt="Source Database"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>exec rdsadmin.rdsadmin_util.grant_sys_object<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;V_$ARCHIVED_LOG&#39;</span>,<span style="color:#e6db74">&#39;DMS_USER&#39;</span>,<span style="color:#e6db74">&#39;SELECT&#39;</span><span style="color:#f92672">)</span>;
+</span></span><span style="display:flex;"><span>exec rdsadmin.rdsadmin_util.grant_sys_object<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;V_$LOG&#39;</span>,<span style="color:#e6db74">&#39;DMS_USER&#39;</span>,<span style="color:#e6db74">&#39;SELECT&#39;</span><span style="color:#f92672">)</span>;
+</span></span><span style="display:flex;"><span>exec rdsadmin.rdsadmin_util.grant_sys_object<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;V_$LOGFILE&#39;</span>,<span style="color:#e6db74">&#39;DMS_USER&#39;</span>,<span style="color:#e6db74">&#39;SELECT&#39;</span><span style="color:#f92672">)</span>;
+</span></span><span style="display:flex;"><span>exec rdsadmin.rdsadmin_util.grant_sys_object<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;V_$DATABASE&#39;</span>,<span style="color:#e6db74">&#39;DMS_USER&#39;</span>,<span style="color:#e6db74">&#39;SELECT&#39;</span><span style="color:#f92672">)</span>;
+</span></span><span style="display:flex;"><span>exec rdsadmin.rdsadmin_util.grant_sys_object<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;V_$THREAD&#39;</span>,<span style="color:#e6db74">&#39;DMS_USER&#39;</span>,<span style="color:#e6db74">&#39;SELECT&#39;</span><span style="color:#f92672">)</span>;
+</span></span><span style="display:flex;"><span>exec rdsadmin.rdsadmin_util.grant_sys_object<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;V_$PARAMETER&#39;</span>,<span style="color:#e6db74">&#39;DMS_USER&#39;</span>,<span style="color:#e6db74">&#39;SELECT&#39;</span><span style="color:#f92672">)</span>;
+</span></span><span style="display:flex;"><span>exec rdsadmin.rdsadmin_util.grant_sys_object<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;V_$NLS_PARAMETERS&#39;</span>,<span style="color:#e6db74">&#39;DMS_USER&#39;</span>,<span style="color:#e6db74">&#39;SELECT&#39;</span><span style="color:#f92672">)</span>;
+</span></span><span style="display:flex;"><span>exec rdsadmin.rdsadmin_util.grant_sys_object<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;V_$TIMEZONE_NAMES&#39;</span>,<span style="color:#e6db74">&#39;DMS_USER&#39;</span>,<span style="color:#e6db74">&#39;SELECT&#39;</span><span style="color:#f92672">)</span>;
+</span></span><span style="display:flex;"><span>exec rdsadmin.rdsadmin_util.grant_sys_object<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;V_$TRANSACTION&#39;</span>,<span style="color:#e6db74">&#39;DMS_USER&#39;</span>,<span style="color:#e6db74">&#39;SELECT&#39;</span><span style="color:#f92672">)</span>;
+</span></span><span style="display:flex;"><span>exec rdsadmin.rdsadmin_util.grant_sys_object<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;DBA_REGISTRY&#39;</span>,<span style="color:#e6db74">&#39;DMS_USER&#39;</span>,<span style="color:#e6db74">&#39;SELECT&#39;</span><span style="color:#f92672">)</span>;
+</span></span><span style="display:flex;"><span>exec rdsadmin.rdsadmin_util.grant_sys_object<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;OBJ$&#39;</span>,<span style="color:#e6db74">&#39;DMS_USER&#39;</span>,<span style="color:#e6db74">&#39;SELECT&#39;</span><span style="color:#f92672">)</span>;
+</span></span><span style="display:flex;"><span>exec rdsadmin.rdsadmin_util.grant_sys_object<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;ALL_ENCRYPTED_COLUMNS&#39;</span>,<span style="color:#e6db74">&#39;DMS_USER&#39;</span>,<span style="color:#e6db74">&#39;SELECT&#39;</span><span style="color:#f92672">)</span>;
+</span></span><span style="display:flex;"><span>exec rdsadmin.rdsadmin_util.grant_sys_object<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;V_$LOGMNR_LOGS&#39;</span>,<span style="color:#e6db74">&#39;DMS_USER&#39;</span>,<span style="color:#e6db74">&#39;SELECT&#39;</span><span style="color:#f92672">)</span>;
+</span></span><span style="display:flex;"><span>exec rdsadmin.rdsadmin_util.grant_sys_object<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;V_$LOGMNR_CONTENTS&#39;</span>,<span style="color:#e6db74">&#39;DMS_USER&#39;</span>,<span style="color:#e6db74">&#39;SELECT&#39;</span><span style="color:#f92672">)</span>;
+</span></span><span style="display:flex;"><span>exec rdsadmin.rdsadmin_util.grant_sys_object<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;DBMS_LOGMNR&#39;</span>,<span style="color:#e6db74">&#39;DMS_USER&#39;</span>,<span style="color:#e6db74">&#39;EXECUTE&#39;</span><span style="color:#f92672">)</span>;
+</span></span></code></pre></div><p><img src="/images/2/29.png?width=90pc" alt="Source Database"></p>
 <ol start="4">
 <li>Run the following query to retain archived redo logs of the source Oracle database instance for 24 hours:</li>
 </ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">exec rdsadmin.rdsadmin_util.set_configuration<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;archivelog retention hours&#39;</span>,24<span style="color:#f92672">)</span>;
-</code></pre></div><ol start="5">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>exec rdsadmin.rdsadmin_util.set_configuration<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;archivelog retention hours&#39;</span>,24<span style="color:#f92672">)</span>;
+</span></span></code></pre></div><ol start="5">
 <li>Run the following query to enable database-level supplemental logging:</li>
 </ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">exec rdsadmin.rdsadmin_util.alter_supplemental_logging<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;ADD&#39;</span><span style="color:#f92672">)</span>;
-</code></pre></div><ol start="6">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>exec rdsadmin.rdsadmin_util.alter_supplemental_logging<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;ADD&#39;</span><span style="color:#f92672">)</span>;
+</span></span></code></pre></div><ol start="6">
 <li>Run the following query to enable PRIMARY KEY logging for tables that have primary keys:</li>
 </ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">exec rdsadmin.rdsadmin_util.alter_supplemental_logging<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;ADD&#39;</span>,<span style="color:#e6db74">&#39;PRIMARY KEY&#39;</span><span style="color:#f92672">)</span>;
-</code></pre></div><ol start="7">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>exec rdsadmin.rdsadmin_util.alter_supplemental_logging<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;ADD&#39;</span>,<span style="color:#e6db74">&#39;PRIMARY KEY&#39;</span><span style="color:#f92672">)</span>;
+</span></span></code></pre></div><ol start="7">
 <li>Run the following queries to add supplemental logging for tables that don’t have primary keys, use the following command to add supplemental logging:</li>
 </ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">alter</span> <span style="color:#66d9ef">table</span> dms_sample.nfl_stadium_data <span style="color:#66d9ef">add</span> supplemental log <span style="color:#66d9ef">data</span> (<span style="color:#66d9ef">ALL</span>) columns;
-<span style="color:#66d9ef">alter</span> <span style="color:#66d9ef">table</span> dms_sample.mlb_data <span style="color:#66d9ef">add</span> supplemental log <span style="color:#66d9ef">data</span> (<span style="color:#66d9ef">ALL</span>) columns;
-<span style="color:#66d9ef">alter</span> <span style="color:#66d9ef">table</span> dms_sample.nfl_data <span style="color:#66d9ef">add</span> supplemental log <span style="color:#66d9ef">data</span> (<span style="color:#66d9ef">ALL</span>) columns;
-</code></pre></div><p><img src="/images/2/30.png?width=90pc" alt="Source Database"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">alter</span> <span style="color:#66d9ef">table</span> dms_sample.nfl_stadium_data <span style="color:#66d9ef">add</span> supplemental log <span style="color:#66d9ef">data</span> (<span style="color:#66d9ef">ALL</span>) columns;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">alter</span> <span style="color:#66d9ef">table</span> dms_sample.mlb_data <span style="color:#66d9ef">add</span> supplemental log <span style="color:#66d9ef">data</span> (<span style="color:#66d9ef">ALL</span>) columns;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">alter</span> <span style="color:#66d9ef">table</span> dms_sample.nfl_data <span style="color:#66d9ef">add</span> supplemental log <span style="color:#66d9ef">data</span> (<span style="color:#66d9ef">ALL</span>) columns;
+</span></span></code></pre></div><p><img src="/images/2/30.png?width=90pc" alt="Source Database"></p>
 
 
 
@@ -1618,19 +1618,19 @@ exec rdsadmin.rdsadmin_util.grant_sys_object<span style="color:#f92672">(</span>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1631091276"></script>
-    <script src="/js/perfect-scrollbar.min.js?1631091276"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1631091276"></script>
-    <script src="/js/jquery.sticky.js?1631091276"></script>
-    <script src="/js/featherlight.min.js?1631091276"></script>
-    <script src="/js/highlight.pack.js?1631091276"></script>
+    <script src="/js/clipboard.min.js?1673819160"></script>
+    <script src="/js/perfect-scrollbar.min.js?1673819160"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1673819160"></script>
+    <script src="/js/jquery.sticky.js?1673819160"></script>
+    <script src="/js/featherlight.min.js?1673819160"></script>
+    <script src="/js/highlight.pack.js?1673819160"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1631091276"></script>
-    <script src="/js/learn.js?1631091276"></script>
-    <script src="/js/hugo-learn.js?1631091276"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1673819160"></script>
+    <script src="/js/learn.js?1673819160"></script>
+    <script src="/js/hugo-learn.js?1673819160"></script>
 
-    <link href="/mermaid/mermaid.css?1631091276" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1631091276"></script>
+    <link href="/mermaid/mermaid.css?1673819160" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1673819160"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
