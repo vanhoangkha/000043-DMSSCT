@@ -35,4 +35,8 @@ pre = "<b>2.1.1. </b>"
 ![Connect](/images/2/5.png?width=90pc)
 
 7. Click on **Download Remote Desktop File** to download the RDP file to access this EC2 instance.
-8. Connect to the EC2 instance using a RDP client.
+8. Before connecting to EC2 instance, we need to change inbound rule of Security Group assigned to the EC2 server.
+![Connect](/images/2/6.png?width=90pc)
+![Connect](/images/2/6.1.png?width=90pc)
+![Connect](/images/2/6.2.png?width=90pc)
+9. Connect to the EC2 instance using a RDP client.

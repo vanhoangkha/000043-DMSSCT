@@ -22,9 +22,10 @@ Bạn có thể sẽ nhận được hộp thoại thông báo **"Object may alr
 {{% /notice %}}
 
 ![Convert](/images/2/14.png?width=90pc)
+![Convert](/images/2/14a.png?width=90pc)
 AWS SCT phân tích schema và tạo báo cáo đánh giá di chuyển cơ sở dữ liệu cho việc chuyển đổi sang PostgreSQL. Các mục có dấu chấm than màu đỏ bên cạnh không thể được dịch trực tiếp từ nguồn sang đích. Điều này bao gồm Procedure, và Package đang lưu trữ.
 
-2. Chọn vào **View** và chọn **Assessment Report view**.
+2. Chọn vào **Main View** và chọn **Assessment Report view**.
 
 ![Convert](/images/2/15.png?width=90pc)
 
@@ -49,6 +50,9 @@ Nếu bạn chọn vào procedure `GENERATESEATS` và `GENERATE_TICKETS`, bạn 
 ![Convert](/images/2/17.png?width=90pc)
 
 5. Tương tự với procedure `GENERATE_TICKETS` và xóa đi `/*+ APPEND */` ở lệnh `INSERT`.
+
+![Convert](/images/2/17a.png?width=90pc)
+
 6. Chọn chuột phải vào schema `dms_sample` ở bảng bên trái và chọn **Create report**.
 
 ![Convert](/images/2/18.png?width=90pc)

@@ -21,7 +21,7 @@ Trong quá trình chạy full load, AWS DMS không tải bảng theo bất kỳ 
 
 ![Target Database](/images/2/31.png?width=90pc)
 
-2. Bạn có thể được nhắc đặt một **Master Password**. Nhập `dbmaster123`, và chọn **OK**.
+2. Bạn có thể được nhắc đặt một **Master Password**. Nhập `pgadmin`, và chọn **OK**.
 
 ![Target Database](/images/2/32.png?width=90pc)
 
@@ -36,6 +36,7 @@ Trong quá trình chạy full load, AWS DMS không tải bảng theo bất kỳ 
 | Connection -> Password          | dbmaster123                        |
 | Connection -> Save Password     | Check                              |
 
+![Target Database](/images/2/33a.png?width=90pc)
 ![Target Database](/images/2/33.png?width=90pc)
 
 4. Chuột phải vào **CSDL AuroraDB** ở menu bên trái, và chọn **Query Tool**.

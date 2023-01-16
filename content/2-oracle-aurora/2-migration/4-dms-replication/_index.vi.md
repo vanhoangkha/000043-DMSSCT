@@ -35,7 +35,7 @@ Máy chủ AWS DMS replication thực hiện việc di chuyển dữ liệu gi�
 | Engine version                    | Leave the default value                   |
 | Allocated storage (GB)            | `50`                                        |
 | VPC                               | **< VPC ID from Environment Setup Step >**    |
-| Multi-AZ                          | No                                        |
+| Multi-AZ                          | Dev or test workload (Single-AZ)                                         |
 | Publicly accessible               | No                                        |
 | Advanced -> VPC Security Group(s) | default                                   |
 

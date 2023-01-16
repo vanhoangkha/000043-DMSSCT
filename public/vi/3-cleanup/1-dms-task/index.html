@@ -12,21 +12,21 @@
     <title>Database Migration Task :: Di chuyển Database trên AWS</title>
 
     
-    <link href="/css/nucleus.css?1673819160" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1673819160" rel="stylesheet">
-    <link href="/css/hybrid.css?1673819160" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1673819160" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1673819160" rel="stylesheet">
-    <link href="/css/auto-complete.css?1673819160" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1673819160" rel="stylesheet">
-    <link href="/css/theme.css?1673819160" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1673819160" rel="stylesheet">
+    <link href="/css/nucleus.css?1673902477" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1673902477" rel="stylesheet">
+    <link href="/css/hybrid.css?1673902477" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1673902477" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1673902477" rel="stylesheet">
+    <link href="/css/auto-complete.css?1673902477" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1673902477" rel="stylesheet">
+    <link href="/css/theme.css?1673902477" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1673902477" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1673819160" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1673902477" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1673819160"></script>
+    <script src="/js/jquery-3.3.1.min.js?1673902477"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1673819160"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1673819160"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1673902477"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1673902477"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1673819160"></script>
+<script type="text/javascript" src="/js/search.js?1673902477"></script>
 
     
   </div>
@@ -945,7 +945,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>16-01-2023</font></i>
+        <i><font color=orange>17-01-2023</font></i>
     </left>
     <left>
         <br>
@@ -1049,7 +1049,7 @@
 <h4 id="xóa-bỏ-database-migration-task">Xóa bỏ Database Migration Task</h4>
 <ol>
 <li>Truy cập <a href="https://console.aws.amazon.com/dms/"><strong>Database Migration Service (AWS DMS) console</strong></a>.</li>
-<li>Ở menu bên trái, chọn <strong>Database migration tasks</strong>, chọn vào từng migration task bạn đã tạo.</li>
+<li>Ở menu bên trái, chọn <strong>Database migration tasks</strong>, chọn vào replication task bạn đã tạo.</li>
 </ol>
 <p><img src="/images/3/1.png?width=90pc" alt="Delete"></p>
 <ol start="3">
@@ -1057,17 +1057,25 @@
 </ol>
 <p><img src="/images/3/2.png?width=90pc" alt="Delete"></p>
 <ol start="4">
-<li>Xác nhận rằng bạn muốn dừng migration task.</li>
+<li>Xác nhận rằng bạn muốn dừng replication task.</li>
 </ol>
 <p><img src="/images/3/3.png?width=90pc" alt="Delete"></p>
 <ol start="5">
-<li>Sau khi trạng thái của migration task thay đổi thành <strong>Stopped</strong>, hãy chọn <strong>Actions</strong> một lần nữa và sau đó chọn <strong>Delete</strong>.</li>
+<li>Sau khi trạng thái của replication task thay đổi thành <strong>Stopped</strong>, hãy chọn <strong>Actions</strong> một lần nữa và sau đó chọn <strong>Delete</strong>.</li>
 </ol>
 <p><img src="/images/3/4.png?width=90pc" alt="Delete"></p>
 <ol start="6">
-<li>Xác nhận rằng bạn muốn xóa migration task.</li>
+<li>Xác nhận rằng bạn muốn xóa replication task.</li>
 </ol>
 <p><img src="/images/3/5.png?width=90pc" alt="Delete"></p>
+<ol start="7">
+<li>Chọn migration task và chọn <strong>Actions</strong> ở bên tay phải sau đó chọn <strong>Delete</strong>.</li>
+</ol>
+<p><img src="/images/3/5a.png?width=90pc" alt="Delete"></p>
+<ol start="8">
+<li>Xác nhận rằng bạn muốn xóa migration task.</li>
+</ol>
+<p><img src="/images/3/5b.png?width=90pc" alt="Delete"></p>
 <p>Tiếp đến phần <a href="../2-dms-endpoints/">Xóa các DMS Endpoint</a>&hellip;</p>
 
 
@@ -1560,19 +1568,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1673819160"></script>
-    <script src="/js/perfect-scrollbar.min.js?1673819160"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1673819160"></script>
-    <script src="/js/jquery.sticky.js?1673819160"></script>
-    <script src="/js/featherlight.min.js?1673819160"></script>
-    <script src="/js/highlight.pack.js?1673819160"></script>
+    <script src="/js/clipboard.min.js?1673902477"></script>
+    <script src="/js/perfect-scrollbar.min.js?1673902477"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1673902477"></script>
+    <script src="/js/jquery.sticky.js?1673902477"></script>
+    <script src="/js/featherlight.min.js?1673902477"></script>
+    <script src="/js/highlight.pack.js?1673902477"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1673819160"></script>
-    <script src="/js/learn.js?1673819160"></script>
-    <script src="/js/hugo-learn.js?1673819160"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1673902477"></script>
+    <script src="/js/learn.js?1673902477"></script>
+    <script src="/js/hugo-learn.js?1673902477"></script>
 
-    <link href="/mermaid/mermaid.css?1673819160" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1673819160"></script>
+    <link href="/mermaid/mermaid.css?1673902477" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1673902477"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

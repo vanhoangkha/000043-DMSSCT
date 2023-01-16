@@ -23,3 +23,5 @@ pre = "<b>3.4. </b>"
 ![Delete](/images/3/11.png?width=90pc)
 
 4. Check the CloudFormation console to ensure the stack that you selected is removed.
+
+![Delete](/images/3/12.png?width=90pc)

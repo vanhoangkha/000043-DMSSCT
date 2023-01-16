@@ -22,16 +22,24 @@ pre = "<b>3.1. </b>"
 
 ![Delete](/images/3/2.png?width=90pc)
 
-4. Confirm that you want to stop the migration task.
+4. Confirm that you want to stop the replication task.
 
 ![Delete](/images/3/3.png?width=90pc)
 
-5. After the status of the migration tasks changes to **Stopped**, click on the **Actions** button again, and then select **Delete**.
+5. After the status of the replication tasks changes to **Stopped**, click on the **Actions** button again, and then select **Delete**.
 
 ![Delete](/images/3/4.png?width=90pc)
 
-6. Confirm that you want to delete the migration task.
+6. Confirm that you want to delete the replication task.
 
 ![Delete](/images/3/5.png?width=90pc)
+
+7. Choice migration task và click on the **Actions** button on the right-hand side and then select **Delete**.
+
+![Delete](/images/3/5a.png?width=90pc)
+
+8. Confirm that you want to stop the migration task.
+
+![Delete](/images/3/5b.png?width=90pc)
 
 Continue to [Delete the DMS Endpoints](../2-dms-endpoints/)...

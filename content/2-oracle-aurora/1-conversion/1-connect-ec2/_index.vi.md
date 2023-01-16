@@ -35,4 +35,8 @@ pre = "<b>2.1.1. </b>"
 ![Connect](/images/2/5.png?width=90pc)
 
 7. Chọn vào **Download Remote Desktop File** để tải tập tin RDP của máy ảo EC2.
-8. Kết nối vào máy chủ EC2 bằng ứng dụng RDP của bạn.
+8. Trước khi kết nối vào máy chủ EC2 bạn hãy thay đổi inbound rules của Security Group được gán vào máy chủ EC2 để chúng ta có thể kết nối đến máy chủ EC2.
+![Connect](/images/2/6.png?width=90pc)
+![Connect](/images/2/6.1.png?width=90pc)
+![Connect](/images/2/6.2.png?width=90pc)
+9. Kết nối vào máy chủ EC2 bằng ứng dụng RDP của bạn.

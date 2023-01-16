@@ -21,7 +21,7 @@ Bây giờ, bạn đã cài đặt xong ứng dụng AWS Schema Conversion Tool,
 |:----------------------:|:------------------------------------------------------------:|
 | Project Name           | AWS Schema Conversion Tool Oracle to Aurora PostgreSQL       |
 | Location               | C:\Users\Administrator\AWS Schema Conversion Tool\Projects   |
-| Database Type          | Transactional Database (OLTP)                                |
+| Database Type          |                               |
 | Source Database Engine | Oracle / I want to switch engines and optimize for the cloud |
 
 ![Project](/images/2/8.png?width=90pc)
@@ -41,6 +41,8 @@ Bây giờ, bạn đã cài đặt xong ứng dụng AWS Schema Conversion Tool,
 | Oracle Driver Path | C:\Users\Administrator\Desktop\DMS Workshop\JDBC\ojdbc8.jar |
 
 ![Project](/images/2/9.png?width=90pc)
+![Project](/images/2/9a.png?width=90pc)
+![Project](/images/2/9b.png?width=90pc)
 
 {{% notice note %}}
 Bạn có thể sẽ thấy có cảnh báo bảo mật về SSL. Hãy chọn **"Accept the risk and continue"**.
@@ -78,8 +80,7 @@ Thông thường, các package, procedure, và function sẽ có một số vấ
 | Amazon Aurora Driver Path | C:\Users\Administrator\Desktop\DMS Workshop\JDBC\postgresql-42.2.9.jar |
 
 ![Project](/images/2/13.png?width=90pc)
+![Project](/images/2/13.1.png?width=90pc)
+![Project](/images/2/13.2.png?width=90pc)
 
-{{% notice note %}}
-Bạn sẽ thấy một cảnh báo về Phiên bản CSDL mà bạn đang kết nối tới là **11.7** nghĩa là thấp hơn khuyến cáo **PostgreSQL 12.0**. Bạn có thể bỏ qua cảnh báo này. 
 ![Project](/images/2/13a.png?width=90pc)
-{{% /notice %}}

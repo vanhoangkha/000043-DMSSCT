@@ -23,3 +23,5 @@ pre = "<b>3.4. </b>"
 ![Delete](/images/3/11.png?width=90pc)
 
 4. Kiểm tra CloudFormation console để đảm bảo stack đã được xóa bỏ hoàn toàn.
+
+![Delete](/images/3/12.png?width=90pc)

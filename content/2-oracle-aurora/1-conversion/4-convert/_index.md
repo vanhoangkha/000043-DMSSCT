@@ -22,9 +22,10 @@ You may be prompted with a dialog box **"Object may already exist in the target 
 {{% /notice %}}
 
 ![Convert](/images/2/14.png?width=90pc)
+![Convert](/images/2/14a.png?width=90pc)
 AWS SCT analyses the schema and creates a database migration assessment report for the conversion to PostgreSQL. Items with a red exclamation mark next to them cannot be directly translated from the source to the target. This includes Stored Procedures, and Packages.
 
-2. Click on the **View** button, and choose **Assessment Report view**.
+2. Click on the **Main View** button, and choose **Assessment Report view**.
 
 ![Convert](/images/2/15.png?width=90pc)
 
@@ -49,6 +50,9 @@ If you click on the `GENERATESEATS`, and the `GENERATE_TICKETS` stored procedure
 ![Convert](/images/2/17.png?width=90pc)
 
 5. Similarly, click on `GENERATE_TICKETS` procedure and remove `/*+ APPEND */` from the `INSERT` statement.
+
+![Convert](/images/2/17a.png?width=90pc)
+
 6. Right click on the `dms_sample` schema in the left-hand panel, and click **Create report**.
 
 ![Convert](/images/2/18.png?width=90pc)

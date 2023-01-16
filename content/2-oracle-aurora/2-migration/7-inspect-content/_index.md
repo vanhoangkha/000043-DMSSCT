@@ -31,7 +31,14 @@ FROM dms_sample.sport_type;
 Baseball, and football are the only two sports that are currently listed in this table. In the next section you will insert several new records to the source database with information about other sport types. DMS will automatically replicate these new records from the source database to the target database.
 {{% /notice %}}
 
+
 3. Now, use the following script to enable the foreign key constraints that we dropped earlier:
+
+{{% notice note %}}
+Before we add foreign key constraints make sure that migration tasks are 100% load-complete to avoid error
+{{% notice note %}}
+
+![Inspect](/images/2/43.png?width=90pc)
 
 {{%attachments title="Add Constrant File" pattern=".*(sql)"/%}}
 

@@ -21,7 +21,7 @@ Now that you have installed the AWS Schema Conversion Tool, the next step is to 
 |:----------------------:|:------------------------------------------------------------:|
 | Project Name           | AWS Schema Conversion Tool Oracle to Aurora PostgreSQL       |
 | Location               | C:\Users\Administrator\AWS Schema Conversion Tool\Projects   |
-| Database Type          | Transactional Database (OLTP)                                |
+| Database Type          | SQL database                                |
 | Source Database Engine | Oracle / I want to switch engines and optimize for the cloud |
 
 ![Project](/images/2/8.png?width=90pc)
@@ -41,6 +41,8 @@ Now that you have installed the AWS Schema Conversion Tool, the next step is to 
 | Oracle Driver Path | C:\Users\Administrator\Desktop\DMS Workshop\JDBC\ojdbc8.jar |
 
 ![Project](/images/2/9.png?width=90pc)
+![Project](/images/2/9a.png?width=90pc)
+![Project](/images/2/9b.png?width=90pc)
 
 {{% notice note %}}
 You may see a security warning prompt to use SSL. Click on **"Accept the risk and continue"** button.
@@ -78,8 +80,8 @@ Generally, packages, procedures, and functions are more likely to have some issu
 | Amazon Aurora Driver Path | C:\Users\Administrator\Desktop\DMS Workshop\JDBC\postgresql-42.2.9.jar |
 
 ![Project](/images/2/13.png?width=90pc)
+![Project](/images/2/13.1.png?width=90pc)
+![Project](/images/2/13.2.png?width=90pc)
 
-{{% notice note %}}
-You may see a warning message saying database version that you connected to is **11.7** which is less than the recommended **PostgreSQL 12.0**. You can ignore the warning.
+
 ![Project](/images/2/13a.png?width=90pc)
-{{% /notice %}}

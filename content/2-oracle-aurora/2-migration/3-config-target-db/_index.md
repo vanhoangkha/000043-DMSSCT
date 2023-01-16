@@ -21,7 +21,7 @@ During the full load process, AWS DMS does not load tables in any particular ord
 
 ![Target Database](/images/2/31.png?width=90pc)
 
-2. You may be prompted to set a **Master Password**. Enter `dbmaster123`, then click, **OK**.
+2. You may be prompted to set a **Master Password**. Enter `pgadmin`, then click, **OK**.
 
 ![Target Database](/images/2/32.png?width=90pc)
 
@@ -36,6 +36,7 @@ During the full load process, AWS DMS does not load tables in any particular ord
 | Connection -> Password          | dbmaster123                        |
 | Connection -> Save Password     | Check                              |
 
+![Target Database](/images/2/33a.png?width=90pc)
 ![Target Database](/images/2/33.png?width=90pc)
 
 4. Right-click on **AuroraDB database** from left-hand menu, and then select **Query Tool**.

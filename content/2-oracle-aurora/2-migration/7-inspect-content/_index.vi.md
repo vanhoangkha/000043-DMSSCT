@@ -33,6 +33,12 @@ Baseball, và football là hai môn thể thao duy nhất được liệt kê tr
 
 3. Bây giờ, hãy sử dụng tập lệnh sau để kích hoạt các ràng buộc khóa ngoại mà chúng ta đã loại bỏ trước đó:
 
+{{% notice note %}}
+Lưu ý trước khi chúng ta thực hiện thêm vào các ràng buộc khoá ngoại trước đó, hãy đảm bảo rằng migration tasks đã load-complete 100% để tránh gặp lỗi
+{{% /notice %}}
+
+![Inspect](/images/2/43.png?width=90pc)
+
 {{%attachments title="Tập tin thêm ràng buộc" pattern=".*(sql)"/%}}
 
    1. Mở tập tin [**AddConstraintsPostgreSQL.sql**](https://dms-immersionday.workshop.aws/code/AddConstraintsPostgreSQL.sql) trong trình soạn thảo văn bản.
