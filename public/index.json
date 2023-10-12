@@ -158,7 +158,7 @@
 	"title": "Video Guide",
 	"tags": [],
 	"description": "",
-	"content": "Link for Video Guide: DMS/SCT Lab\n"
+	"content": "  DMS/SCT Lab\n  Migrate an Oracle database to Aurora PostgreSQL using AWS DMS and AWS SCT\n  Best Practices for Migrating from Oracle to Amazon Aurora\n  "
 },
 {
 	"uri": "/2-oracle-aurora/2-migration/5-endpoints/",
