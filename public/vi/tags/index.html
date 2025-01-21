@@ -3,30 +3,30 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.99.1" />
+    <meta name="generator" content="Hugo 0.140.2">
     <meta name="description" content="">
-<meta name="author" content="journeyoftheaverageguy@gmail.com">
+<meta name="author" content="longthg">
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Tags :: DI CHUYỂN DATABASE TRÊN AWS</title>
+    <title>Tags :: AWS Workshop - Di chuyển dữ liệu</title>
 
     
-    <link href="/css/nucleus.css?1701073382" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1701073382" rel="stylesheet">
-    <link href="/css/hybrid.css?1701073382" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1701073382" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1701073382" rel="stylesheet">
-    <link href="/css/auto-complete.css?1701073382" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1701073382" rel="stylesheet">
-    <link href="/css/theme.css?1701073382" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1701073382" rel="stylesheet">
+    <link href="/css/nucleus.css?1737446926" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1737446926" rel="stylesheet">
+    <link href="/css/hybrid.css?1737446926" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1737446926" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1737446926" rel="stylesheet">
+    <link href="/css/auto-complete.css?1737446926" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1737446926" rel="stylesheet">
+    <link href="/css/theme.css?1737446926" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1737446926" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1701073382" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1737446926" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1701073382"></script>
+    <script src="/js/jquery-3.3.1.min.js?1737446926"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1701073382"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1701073382"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1737446926"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1737446926"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/vi";
+        var baseurl = "\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1701073382"></script>
+<script type="text/javascript" src="/js/search.js?1737446926"></script>
 
     
   </div>
@@ -82,13 +82,13 @@
  
   
     
-    <li data-nav-id="/vi/1-prerequisites/" title="Các bước chuẩn bị" class="dd-item 
+    <li data-nav-id="/vi/1-start/" title="Bắt đầu" class="dd-item 
         
         
         
         ">
-      <a href="/vi/1-prerequisites/">
-          <b>1. </b>Các bước chuẩn bị
+      <a href="/vi/1-start/">
+          <b> 1. </b>Bắt đầu
           
             <i class="fas fa-check read-icon"></i>
           
@@ -113,13 +113,13 @@
  
   
     
-    <li data-nav-id="/vi/1-prerequisites/1-console/" title="Đăng nhập vào Console" class="dd-item 
+    <li data-nav-id="/vi/1-start/1.1-signin/" title="Đăng nhập vào AWS" class="dd-item 
         
         
         
         ">
-      <a href="/vi/1-prerequisites/1-console/">
-          <b>1.1. </b>Đăng nhập vào Console
+      <a href="/vi/1-start/1.1-signin/">
+          <b> 1.1. </b>Đăng nhập vào AWS
           
             <i class="fas fa-check read-icon"></i>
           
@@ -141,13 +141,13 @@
  
   
     
-    <li data-nav-id="/vi/1-prerequisites/2-create-kp/" title="Tạo EC2 key pair" class="dd-item 
+    <li data-nav-id="/vi/1-start/1.2-keypair/" title="Tạo cặp khóa" class="dd-item 
         
         
         
         ">
-      <a href="/vi/1-prerequisites/2-create-kp/">
-          <b>1.2. </b>Tạo EC2 key pair
+      <a href="/vi/1-start/1.2-keypair/">
+          <b> 1.2. </b>Tạo cặp khóa
           
             <i class="fas fa-check read-icon"></i>
           
@@ -169,13 +169,41 @@
  
   
     
-    <li data-nav-id="/vi/1-prerequisites/3-config-env/" title="Chuẩn bị Môi trường" class="dd-item 
+    <li data-nav-id="/vi/1-start/1.3-cfnenv/" title="Chuẩn bị môi trường" class="dd-item 
         
         
         
         ">
-      <a href="/vi/1-prerequisites/3-config-env/">
-          <b>1.3. </b>Chuẩn bị Môi trường
+      <a href="/vi/1-start/1.3-cfnenv/">
+          <b> 1.3. </b>Chuẩn bị môi trường
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/1-start/1.4-ec2connect/" title="Kết nối tới máy ảo EC2 và cài đặt Schema Conversion tool" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/1-start/1.4-ec2connect/">
+          <b> 1.4. </b>Kết nối tới máy ảo EC2 và cài đặt Schema Conversion tool
           
             <i class="fas fa-check read-icon"></i>
           
@@ -204,13 +232,13 @@
  
   
     
-    <li data-nav-id="/vi/2-oracle-aurora/" title="Oracle sang Amazon Aurora (PostgreSQL)" class="dd-item 
+    <li data-nav-id="/vi/2-selectsource/" title="Select your DMS source" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-oracle-aurora/">
-          <b>2. </b>Oracle sang Amazon Aurora (PostgreSQL)
+      <a href="/vi/2-selectsource/">
+          <b> 2. </b>Select your DMS source
           
             <i class="fas fa-check read-icon"></i>
           
@@ -235,13 +263,180 @@
  
   
     
-    <li data-nav-id="/vi/2-oracle-aurora/1-conversion/" title="Chuyển đổi Schema" class="dd-item 
+    <li data-nav-id="/vi/2-selectsource/2.1-oracle/" title="Nguồn Oracle" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-oracle-aurora/1-conversion/">
-          <b>2.1. </b>Chuyển đổi Schema
+      <a href="/vi/2-selectsource/2.1-oracle/">
+          <b> 2.1. </b>Nguồn Oracle
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/vi/2-selectsource/2.1-oracle/2.1.1-connectsrcdb/" title="Kết nối tới CSDL nguồn Oracle" class="dd-item ">
+        <a href="/vi/2-selectsource/2.1-oracle/2.1.1-connectsrcdb/">
+        <b> 2.1.1. </b>Kết nối tới CSDL nguồn Oracle
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/vi/2-selectsource/2.1-oracle/2.1.2-configsrcdb/" title="Cấu hình CSDL nguồn" class="dd-item ">
+        <a href="/vi/2-selectsource/2.1-oracle/2.1.2-configsrcdb/">
+        <b> 2.1.2. </b>Cấu hình CSDL nguồn
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-selectsource/2.2-sqlsrv/" title="Nguồn SQL Server" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-selectsource/2.2-sqlsrv/">
+          <b> 2.2. </b>Nguồn SQL Server
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/vi/2-selectsource/2.2-sqlsrv/2.2.1-connectsrcdb/" title="Mở SQL Server Management Studio" class="dd-item ">
+        <a href="/vi/2-selectsource/2.2-sqlsrv/2.2.1-connectsrcdb/">
+        <b> 2.2.1. </b>Mở SQL Server Management Studio
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/vi/2-selectsource/2.2-sqlsrv/2.2.2-configsrcdb/" title="Cấu hình CSDL nguồn - MS SQL Server" class="dd-item ">
+        <a href="/vi/2-selectsource/2.2-sqlsrv/2.2.2-configsrcdb/">
+        <b> 2.2.2. </b>Cấu hình CSDL nguồn - MS SQL Server
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-migratetotarget/" title="Chọn CSDL đích cho DMS" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-migratetotarget/">
+          <b> 3. </b>Chọn CSDL đích cho DMS
           
             <i class="fas fa-check read-icon"></i>
           
@@ -266,20 +461,44 @@
  
   
     
-    <li data-nav-id="/vi/2-oracle-aurora/1-conversion/1-connect-ec2/" title="Kết nối EC2" class="dd-item 
+    <li data-nav-id="/vi/3-migratetotarget/3.1-schemaconv/" title="Quá trình huyển đổi lược đồ" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-oracle-aurora/1-conversion/1-connect-ec2/">
-          <b>2.1.1. </b>Kết nối EC2
+      <a href="/vi/3-migratetotarget/3.1-schemaconv/">
+          <b> 3.1. </b>Quá trình huyển đổi lược đồ
           
             <i class="fas fa-check read-icon"></i>
           
       </a>
       
-              
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/vi/3-migratetotarget/3.1-schemaconv/3.1.1-configmysql/" title="Cấp quyền trong CSDL đich" class="dd-item ">
+        <a href="/vi/3-migratetotarget/3.1-schemaconv/3.1.1-configmysql/">
+        <b> 3.1.1. </b>Cấp quyền trong CSDL đich
+        <i class="fas fa-check read-icon"></i>
+        </a>
     </li>
+     
   
  
 
@@ -294,20 +513,13 @@
  
   
     
-    <li data-nav-id="/vi/2-oracle-aurora/1-conversion/2-aws-sct/" title="Schema Conversion Tool" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/2-oracle-aurora/1-conversion/2-aws-sct/">
-          <b>2.1.2. </b>Schema Conversion Tool
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
+      <li data-nav-id="/vi/3-migratetotarget/3.1-schemaconv/3.1.2-createproject/" title="Tạo dự án trong SCT" class="dd-item ">
+        <a href="/vi/3-migratetotarget/3.1-schemaconv/3.1.2-createproject/">
+        <b> 3.1.2. </b>Tạo dự án trong SCT
+        <i class="fas fa-check read-icon"></i>
+        </a>
     </li>
+     
   
  
 
@@ -322,24 +534,25 @@
  
   
     
-    <li data-nav-id="/vi/2-oracle-aurora/1-conversion/3-dms-project/" title="Database Migration Project" class="dd-item 
+    <li data-nav-id="/vi/3-migratetotarget/3.1-schemaconv/3.1.3-schemaconv/" title="Chuyển đổi lược đồ" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-oracle-aurora/1-conversion/3-dms-project/">
-          <b>2.1.3. </b>Database Migration Project
+      <a href="/vi/3-migratetotarget/3.1-schemaconv/3.1.3-schemaconv/">
+          <b> 3.1.3. </b>Chuyển đổi lược đồ
           
             <i class="fas fa-check read-icon"></i>
           
       </a>
       
-              
-    </li>
-  
- 
-
-            
+      
+        <ul>
+          
+          
+          
+          
+        
           
             
             
@@ -350,18 +563,20 @@
  
   
     
-    <li data-nav-id="/vi/2-oracle-aurora/1-conversion/4-convert/" title="Chuyển đổi Schema" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/2-oracle-aurora/1-conversion/4-convert/">
-          <b>2.1.4. </b>Chuyển đổi Schema
+      <li data-nav-id="/vi/3-migratetotarget/3.1-schemaconv/3.1.3-schemaconv/modifycode/" title="Sửa mã thủ tục" class="dd-item ">
+        <a href="/vi/3-migratetotarget/3.1-schemaconv/3.1.3-schemaconv/modifycode/">
+        <b> a. </b>Sửa mã thủ tục
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
           
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
+        
+        </ul>
               
     </li>
   
@@ -387,13 +602,13 @@
  
   
     
-    <li data-nav-id="/vi/2-oracle-aurora/2-migration/" title="Dịch chuyển Dữ liệu" class="dd-item 
+    <li data-nav-id="/vi/3-migratetotarget/3.2-migration/" title="Data Migration" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-oracle-aurora/2-migration/">
-          <b>2.2. </b>Dịch chuyển Dữ liệu
+      <a href="/vi/3-migratetotarget/3.2-migration/">
+          <b> 3.2. </b>Data Migration
           
             <i class="fas fa-check read-icon"></i>
           
@@ -418,20 +633,42 @@
  
   
     
-    <li data-nav-id="/vi/2-oracle-aurora/2-migration/1-connect-source-db/" title="Kết nối tới Database Nguồn" class="dd-item 
+    <li data-nav-id="/vi/3-migratetotarget/3.2-migration/3.2.1-configtarget/" title="Configure the Target Database" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-oracle-aurora/2-migration/1-connect-source-db/">
-          <b>2.2.1. </b>Kết nối tới Database Nguồn
+      <a href="/vi/3-migratetotarget/3.2-migration/3.2.1-configtarget/">
+          <b> 3.2.1. </b>Configure the Target Database
           
             <i class="fas fa-check read-icon"></i>
           
       </a>
       
-              
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/vi/3-migratetotarget/3.2-migration/3.2.1-configtarget/a-rds-mssql/" title="Cấu hình cơ sở dữ liệu đích (RDS Microsoft SQL Server)" class="dd-item ">
+        <a href="/vi/3-migratetotarget/3.2-migration/3.2.1-configtarget/a-rds-mssql/">
+        <b> a. </b>Cấu hình cơ sở dữ liệu đích (RDS Microsoft SQL Server)
+        <i class="fas fa-check read-icon"></i>
+        </a>
     </li>
+     
   
  
 
@@ -446,20 +683,13 @@
  
   
     
-    <li data-nav-id="/vi/2-oracle-aurora/2-migration/2-config-source-db/" title="Cấu hình Database Nguồn" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/2-oracle-aurora/2-migration/2-config-source-db/">
-          <b>2.2.2. </b>Cấu hình Database Nguồn
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
+      <li data-nav-id="/vi/3-migratetotarget/3.2-migration/3.2.1-configtarget/b-auroramysql/" title="Aurora (MySQL compatible) target" class="dd-item ">
+        <a href="/vi/3-migratetotarget/3.2-migration/3.2.1-configtarget/b-auroramysql/">
+        <b> b. </b>Aurora (MySQL compatible) target
+        <i class="fas fa-check read-icon"></i>
+        </a>
     </li>
+     
   
  
 
@@ -474,160 +704,13 @@
  
   
     
-    <li data-nav-id="/vi/2-oracle-aurora/2-migration/3-config-target-db/" title="Cấu hình Database Đích" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/2-oracle-aurora/2-migration/3-config-target-db/">
-          <b>2.2.3. </b>Cấu hình Database Đích
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
+      <li data-nav-id="/vi/3-migratetotarget/3.2-migration/3.2.1-configtarget/c-aurorapostgres/" title="Aurora (PostgresSQL compatible) target" class="dd-item ">
+        <a href="/vi/3-migratetotarget/3.2-migration/3.2.1-configtarget/c-aurorapostgres/">
+        <b> c. </b>Aurora (PostgresSQL compatible) target
+        <i class="fas fa-check read-icon"></i>
+        </a>
     </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/2-oracle-aurora/2-migration/4-dms-replication/" title="Máy ảo DMS Replication" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/2-oracle-aurora/2-migration/4-dms-replication/">
-          <b>2.2.4. </b>Máy ảo DMS Replication
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/2-oracle-aurora/2-migration/5-endpoints/" title="Endpoint Nguồn và Đích" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/2-oracle-aurora/2-migration/5-endpoints/">
-          <b>2.2.5. </b>Endpoint Nguồn và Đích
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/2-oracle-aurora/2-migration/6-migration-task/" title="DMS Migration Task" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/2-oracle-aurora/2-migration/6-migration-task/">
-          <b>2.2.6. </b>DMS Migration Task
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/2-oracle-aurora/2-migration/7-inspect-content/" title="Kiểm tra Database Đích" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/2-oracle-aurora/2-migration/7-inspect-content/">
-          <b>2.2.7. </b>Kiểm tra Database Đích
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/2-oracle-aurora/2-migration/8-replicate-changes/" title="Di chuyển dữ liệu thay đổi" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/2-oracle-aurora/2-migration/8-replicate-changes/">
-          <b>2.2.8. </b>Di chuyển dữ liệu thay đổi
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
+     
   
  
 
@@ -651,18 +734,226 @@
  
   
     
-    <li data-nav-id="/vi/2-oracle-aurora/3-summary/" title="Tổng kết" class="dd-item 
+      <li data-nav-id="/vi/3-migratetotarget/3.2-migration/3.2.2-repinstance/" title="Create a replication instance" class="dd-item ">
+        <a href="/vi/3-migratetotarget/3.2-migration/3.2.2-repinstance/">
+        <b> 3.2.2. </b>Create a replication instance
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/vi/3-migratetotarget/3.2-migration/3.2.3-createendpoint/" title="Create DMS Source and Target Endpoints" class="dd-item ">
+        <a href="/vi/3-migratetotarget/3.2-migration/3.2.3-createendpoint/">
+        <b> 3.2.3. </b>Create DMS Source and Target Endpoints
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/vi/3-migratetotarget/3.2-migration/3.2.4-createtask/" title="Create a DMS Migration Task" class="dd-item ">
+        <a href="/vi/3-migratetotarget/3.2-migration/3.2.4-createtask/">
+        <b> 3.2.4. </b>Create a DMS Migration Task
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-migratetotarget/3.2-migration/3.2.5-inspect/" title="Inspect the Content of Target Database" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-oracle-aurora/3-summary/">
-          <b>2.3. </b>Tổng kết
+      <a href="/vi/3-migratetotarget/3.2-migration/3.2.5-inspect/">
+          <b> 3.2.5. </b>Inspect the Content of Target Database
           
             <i class="fas fa-check read-icon"></i>
           
       </a>
       
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/vi/3-migratetotarget/3.2-migration/3.2.5-inspect/a-rdsmssql/" title="Microsoft SQL Server target" class="dd-item ">
+        <a href="/vi/3-migratetotarget/3.2-migration/3.2.5-inspect/a-rdsmssql/">
+        <b> a. </b>Microsoft SQL Server target
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/vi/3-migratetotarget/3.2-migration/3.2.5-inspect/b-auroramysql/" title="Aurora (MySQL compatible) target" class="dd-item ">
+        <a href="/vi/3-migratetotarget/3.2-migration/3.2.5-inspect/b-auroramysql/">
+        <b> b. </b>Aurora (MySQL compatible) target
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/vi/3-migratetotarget/3.2-migration/3.2.5-inspect/c-aurorapostgres/" title="Aurora (PostgresSQL compatible) target" class="dd-item ">
+        <a href="/vi/3-migratetotarget/3.2-migration/3.2.5-inspect/c-aurorapostgres/">
+        <b> c. </b>Aurora (PostgresSQL compatible) target
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/vi/3-migratetotarget/3.2-migration/3.2.5-inspect/d-oracle/" title="Oracle target" class="dd-item ">
+        <a href="/vi/3-migratetotarget/3.2-migration/3.2.5-inspect/d-oracle/">
+        <b> d. </b>Oracle target
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/vi/3-migratetotarget/3.2-migration/3.2.5-inspect/e-s3/" title="Amazon S3 Target" class="dd-item ">
+        <a href="/vi/3-migratetotarget/3.2-migration/3.2.5-inspect/e-s3/">
+        <b> e. </b>Amazon S3 Target
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/vi/3-migratetotarget/3.2-migration/3.2.6-replicatechange/" title="Replicate Data Changes" class="dd-item ">
+        <a href="/vi/3-migratetotarget/3.2-migration/3.2.6-replicatechange/">
+        <b> 3.2.6. </b>Replicate Data Changes
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
               
     </li>
   
@@ -686,13 +977,13 @@
  
   
     
-    <li data-nav-id="/vi/3-cleanup/" title="Dọn dẹp" class="dd-item 
+    <li data-nav-id="/vi/4-serverless/" title="Serverless replication" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-cleanup/">
-          <b>3. </b>Dọn dẹp
+      <a href="/vi/4-serverless/">
+          <b> 4. </b>Serverless replication
           
             <i class="fas fa-check read-icon"></i>
           
@@ -717,18 +1008,70 @@
  
   
     
-    <li data-nav-id="/vi/3-cleanup/1-dms-task/" title="Database Migration Task" class="dd-item 
+    <li data-nav-id="/vi/4-serverless/4.1-migrate/" title="Dịch chuyển dữ liệu sử dụng DMS Serverless" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-cleanup/1-dms-task/">
-          <b>3.1. </b>Database Migration Task
+      <a href="/vi/4-serverless/4.1-migrate/">
+          <b> 4.1. </b>Dịch chuyển dữ liệu sử dụng DMS Serverless
           
             <i class="fas fa-check read-icon"></i>
           
       </a>
       
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/vi/4-serverless/4.1-migrate/4.1.1-createmigration/" title="Tạo quá trình dịch chuyển serverless" class="dd-item ">
+        <a href="/vi/4-serverless/4.1-migrate/4.1.1-createmigration/">
+        <b> 4.1.1. </b>Tạo quá trình dịch chuyển serverless
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/vi/4-serverless/4.1-migrate/4.1.2-replicationstages/" title="AWS DMS Serverless - Các giai đoạn sao chép" class="dd-item ">
+        <a href="/vi/4-serverless/4.1-migrate/4.1.2-replicationstages/">
+        <b> 4.1.2. </b>AWS DMS Serverless - Các giai đoạn sao chép
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
               
     </li>
   
@@ -745,20 +1088,42 @@
  
   
     
-    <li data-nav-id="/vi/3-cleanup/2-dms-endpoints/" title="DMS Endpoint" class="dd-item 
+    <li data-nav-id="/vi/4-serverless/4.2-scaletesting/" title="Kiểm thử hoạt động mở rộng quy mô của DMS Serverless" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-cleanup/2-dms-endpoints/">
-          <b>3.2. </b>DMS Endpoint
+      <a href="/vi/4-serverless/4.2-scaletesting/">
+          <b> 4.2. </b>Kiểm thử hoạt động mở rộng quy mô của DMS Serverless
           
             <i class="fas fa-check read-icon"></i>
           
       </a>
       
-              
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/vi/4-serverless/4.2-scaletesting/4.2.1-generateload/" title="Tạo khối lượng xử lý trên CSDL nguồn" class="dd-item ">
+        <a href="/vi/4-serverless/4.2-scaletesting/4.2.1-generateload/">
+        <b> 4.2.1. </b>Tạo khối lượng xử lý trên CSDL nguồn
+        <i class="fas fa-check read-icon"></i>
+        </a>
     </li>
+     
   
  
 
@@ -773,20 +1138,13 @@
  
   
     
-    <li data-nav-id="/vi/3-cleanup/3-replication-instance/" title="DMS Replication instance" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/3-cleanup/3-replication-instance/">
-          <b>3.3. </b>DMS Replication instance
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
+      <li data-nav-id="/vi/4-serverless/4.2-scaletesting/4.2.2-monitorupscale/" title="Giám sát sự kiện mở rộng quy mô" class="dd-item ">
+        <a href="/vi/4-serverless/4.2-scaletesting/4.2.2-monitorupscale/">
+        <b> 4.2.2. </b>Giám sát sự kiện mở rộng quy mô
+        <i class="fas fa-check read-icon"></i>
+        </a>
     </li>
+     
   
  
 
@@ -801,18 +1159,20 @@
  
   
     
-    <li data-nav-id="/vi/3-cleanup/4-cf-stack/" title="CloudFormation Stack" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/3-cleanup/4-cf-stack/">
-          <b>3.4. </b>CloudFormation Stack
+      <li data-nav-id="/vi/4-serverless/4.2-scaletesting/4.2.3-monitordownscale/" title="Giám sát sự kiện thu nhỏ quy mô" class="dd-item ">
+        <a href="/vi/4-serverless/4.2-scaletesting/4.2.3-monitordownscale/">
+        <b> 4.2.3. </b>Giám sát sự kiện thu nhỏ quy mô
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
           
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
+        
+        </ul>
               
     </li>
   
@@ -836,18 +1196,556 @@
  
   
     
-    <li data-nav-id="/vi/4-video/" title="Video tham khảo" class="dd-item 
+    <li data-nav-id="/vi/5-monitoring/" title="Theo dõi DMS Migrations" class="dd-item 
         
         
         
         ">
-      <a href="/vi/4-video/">
-          <b>4. </b>Video tham khảo
+      <a href="/vi/5-monitoring/">
+          <b> 5. </b>Theo dõi DMS Migrations
           
             <i class="fas fa-check read-icon"></i>
           
       </a>
       
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/vi/5-monitoring/5.1-cloudwatchmetrics/" title="Các số liệu trên CloudWatch" class="dd-item ">
+        <a href="/vi/5-monitoring/5.1-cloudwatchmetrics/">
+        <b> 5.1. </b>Các số liệu trên CloudWatch
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/vi/5-monitoring/5.2-eventnotifications/" title="Thông báo sự kiện" class="dd-item ">
+        <a href="/vi/5-monitoring/5.2-eventnotifications/">
+        <b> 5.2. </b>Thông báo sự kiện
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/vi/5-monitoring/5.3-tablestatistics/" title="Table Statistics" class="dd-item ">
+        <a href="/vi/5-monitoring/5.3-tablestatistics/">
+        <b> 5.3. </b>Table Statistics
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/vi/5-monitoring/5.4-tasklogs/" title="Task Logs" class="dd-item ">
+        <a href="/vi/5-monitoring/5.4-tasklogs/">
+        <b> 5.4. </b>Task Logs
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/vi/5-monitoring/5.5-taskstatus/" title="Các trạng thái của tác vụ" class="dd-item ">
+        <a href="/vi/5-monitoring/5.5-taskstatus/">
+        <b> 5.5. </b>Các trạng thái của tác vụ
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/vi/5-monitoring/5.6-runbook/" title="RunBook" class="dd-item ">
+        <a href="/vi/5-monitoring/5.6-runbook/">
+        <b> 5.6. </b>RunBook
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/6-troubleshooting/" title="Xử lý sự cố với AWS DMS" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/6-troubleshooting/">
+          <b> 6. </b>Xử lý sự cố với AWS DMS
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/6-troubleshooting/6.1-memorypressure/" title="Áp lực bộ nhớ lên DMS Instance" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/6-troubleshooting/6.1-memorypressure/">
+          <b> 6.1. </b>Áp lực bộ nhớ lên DMS Instance
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/vi/6-troubleshooting/6.1-memorypressure/6.1.1-environmentcreation/" title="Tạo môi trường" class="dd-item ">
+        <a href="/vi/6-troubleshooting/6.1-memorypressure/6.1.1-environmentcreation/">
+        <b> 6.1.1. </b>Tạo môi trường
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/vi/6-troubleshooting/6.1-memorypressure/6.1.2-troubleshootingsteps/" title="Troubleshooting Steps" class="dd-item ">
+        <a href="/vi/6-troubleshooting/6.1-memorypressure/6.1.2-troubleshootingsteps/">
+        <b> 6.1.2. </b>Troubleshooting Steps
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/vi/6-troubleshooting/6.1-memorypressure/6.1.3-resolution/" title="Giải pháp" class="dd-item ">
+        <a href="/vi/6-troubleshooting/6.1-memorypressure/6.1.3-resolution/">
+        <b> 6.1.3. </b>Giải pháp
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/6-troubleshooting/6.2-tableerrors/" title="Lỗi bảng trong tác vụ DMS" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/6-troubleshooting/6.2-tableerrors/">
+          <b> 6.2. </b>Lỗi bảng trong tác vụ DMS
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/vi/6-troubleshooting/6.2-tableerrors/6.2.1-environmentcreation/" title="Tạo môi trường" class="dd-item ">
+        <a href="/vi/6-troubleshooting/6.2-tableerrors/6.2.1-environmentcreation/">
+        <b> 6.2.1. </b>Tạo môi trường
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/vi/6-troubleshooting/6.2-tableerrors/6.2.2-troubleshootingsteps/" title="Các bước tìm lỗi" class="dd-item ">
+        <a href="/vi/6-troubleshooting/6.2-tableerrors/6.2.2-troubleshootingsteps/">
+        <b> 6.2.2. </b>Các bước tìm lỗi
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/vi/6-troubleshooting/6.2-tableerrors/6.2.3-resolution/" title="Giải pháp" class="dd-item ">
+        <a href="/vi/6-troubleshooting/6.2-tableerrors/6.2.3-resolution/">
+        <b> 6.2.3. </b>Giải pháp
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/7-cleanup/" title="Dọn dẹp môi trường" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/7-cleanup/">
+          <b> 7. </b>Dọn dẹp môi trường
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/vi/7-cleanup/7.1-deleteserverlesstask/" title="Xóa Serverless Migration Task" class="dd-item ">
+        <a href="/vi/7-cleanup/7.1-deleteserverlesstask/">
+        <b> 7.1. </b>Xóa Serverless Migration Task
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/vi/7-cleanup/7.2-deletedmstask/" title="Xóa Database Migration Task" class="dd-item ">
+        <a href="/vi/7-cleanup/7.2-deletedmstask/">
+        <b> 7.2. </b>Xóa Database Migration Task
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/vi/7-cleanup/7.3-deleteendpoints/" title="Xóa các DMS Endpoint" class="dd-item ">
+        <a href="/vi/7-cleanup/7.3-deleteendpoints/">
+        <b> 7.3. </b>Xóa các DMS Endpoint
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/vi/7-cleanup/7.4-deleterepinstance/" title="Delete the DMS Replication Instance" class="dd-item ">
+        <a href="/vi/7-cleanup/7.4-deleterepinstance/">
+        <b> 7.4. </b>Delete the DMS Replication Instance
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/vi/7-cleanup/7.5-deletecfnstack/" title="Delete the CloudFormation Stack" class="dd-item ">
+        <a href="/vi/7-cleanup/7.5-deletecfnstack/">
+        <b> 7.5. </b>Delete the CloudFormation Stack
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/vi/7-cleanup/7.6-deletebucketandrole/" title="Delete S3 Bucket and IAM Roles" class="dd-item ">
+        <a href="/vi/7-cleanup/7.6-deletebucketandrole/">
+        <b> 7.6. </b>Delete S3 Bucket and IAM Roles
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
               
     </li>
   
@@ -936,7 +1834,7 @@
       <left>
     
      <b> Workshop</b> <br>
-    <img src="https://hitwebcounter.com/counter/counter.php?page=7832985&style=0038&nbdigits=9&type=page&initCount=0" title="Migrate" Alt="web counter"   border="0" /></a>  <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=11626245&style=0038&nbdigits=9&type=page&initCount=0" title="Migrate" Alt="web counter"   border="0" /></a>  <br>
      <b> <a href="https://cloudjourney.awsstudygroup.com/">Cloud Journey</a></b> <br>
     <img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0" title="Total CLoud Journey" Alt="web counter"   border="0"   />
      
@@ -945,14 +1843,14 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>27-11-2023</font></i>
+        <i><font color=orange>21-01-2025</font></i>
     </left>
     <left>
         <br>
         <br>
-            <b> Team </b> <br>         
-            <i>
-             <a href="https://www.linkedin.com/in/jotaguy"  style="color:orange">Gia Hưng</a>
+            <b> Team </b> <br>
+            <i> <a href="https://www.linkedin.com/in/longhg0220/"  style="color:orange"> Hoàng Long </a> <br>
+                <i> <a href="https://www.linkedin.com/in/vanhoangkha/"  style="color:orange"> Hoàng Kha </a> <br>
         </i>
         </left>
 
@@ -992,7 +1890,7 @@
             
           
           
-            <a href='/vi/'>Di chuyển Database trên AWS</a> > Tags
+            <a href='/vi/'>Chuyển đổi lược đồ và di dời CSDL</a> > Tags
           
         
           
@@ -1003,7 +1901,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -1132,6 +2030,136 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
             
         
                     
@@ -1210,9 +2238,6 @@
                     
 
                     
-            
-        
-                    
                         
             
             
@@ -1232,34 +2257,6 @@
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
             
         
                     
@@ -1273,11 +2270,10 @@
 
                     
                     
+                        
+                    
                     
 
-                    
-            
-        
                     
                         
             
@@ -1291,41 +2287,6 @@
                     
                     
 
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -1394,24 +2355,6 @@
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
                         
             
             
@@ -1457,6 +2400,67 @@
                     
 
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
             
         
                     
@@ -1491,6 +2495,512 @@
                     
                     
 
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
             
         
@@ -1505,7 +3015,7 @@
 	 
 		
 		
-			<a class="nav nav-next" href="/vi/1-prerequisites/" title="Các bước chuẩn bị" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/vi/1-start/" title="Bắt đầu" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1515,19 +3025,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1701073382"></script>
-    <script src="/js/perfect-scrollbar.min.js?1701073382"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1701073382"></script>
-    <script src="/js/jquery.sticky.js?1701073382"></script>
-    <script src="/js/featherlight.min.js?1701073382"></script>
-    <script src="/js/highlight.pack.js?1701073382"></script>
+    <script src="/js/clipboard.min.js?1737446926"></script>
+    <script src="/js/perfect-scrollbar.min.js?1737446926"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1737446926"></script>
+    <script src="/js/jquery.sticky.js?1737446926"></script>
+    <script src="/js/featherlight.min.js?1737446926"></script>
+    <script src="/js/highlight.pack.js?1737446926"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1701073382"></script>
-    <script src="/js/learn.js?1701073382"></script>
-    <script src="/js/hugo-learn.js?1701073382"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1737446926"></script>
+    <script src="/js/learn.js?1737446926"></script>
+    <script src="/js/hugo-learn.js?1737446926"></script>
 
-    <link href="/mermaid/mermaid.css?1701073382" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1701073382"></script>
+    <link href="/mermaid/mermaid.css?1737446926" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1737446926"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

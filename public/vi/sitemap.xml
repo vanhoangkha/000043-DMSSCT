@@ -2,47 +2,67 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/vi/1-prerequisites/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <loc>/vi/6-troubleshooting/6.1-memorypressure/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/1-prerequisites/"
+                href="/6-troubleshooting/6.1-memorypressure/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/1-prerequisites/"
+                href="/vi/6-troubleshooting/6.1-memorypressure/"
                 />
   </url><url>
-    <loc>/vi/2-oracle-aurora/1-conversion/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <loc>/vi/1-start/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-oracle-aurora/1-conversion/"
+                href="/1-start/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-oracle-aurora/1-conversion/"
+                href="/vi/1-start/"
                 />
   </url><url>
-    <loc>/vi/3-cleanup/1-dms-task/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <loc>/vi/5-monitoring/5.1-cloudwatchmetrics/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/3-cleanup/1-dms-task/"
+                href="/5-monitoring/5.1-cloudwatchmetrics/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/3-cleanup/1-dms-task/"
+                href="/vi/5-monitoring/5.1-cloudwatchmetrics/"
+                />
+  </url><url>
+    <loc>/vi/3-migratetotarget/3.1-schemaconv/3.1.1-configmysql/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/3-migratetotarget/3.1-schemaconv/3.1.1-configmysql/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/3-migratetotarget/3.1-schemaconv/3.1.1-configmysql/"
+                />
+  </url><url>
+    <loc>/vi/3-migratetotarget/3.2-migration/3.2.1-configtarget/a-rds-mssql/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/3-migratetotarget/3.2-migration/3.2.1-configtarget/a-rds-mssql/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/3-migratetotarget/3.2-migration/3.2.1-configtarget/a-rds-mssql/"
                 />
   </url><url>
     <loc>/vi/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -54,303 +74,712 @@
                 href="/vi/"
                 />
   </url><url>
-    <loc>/vi/1-prerequisites/1-console/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <loc>/vi/3-migratetotarget/3.2-migration/3.2.1-configtarget/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/1-prerequisites/1-console/"
+                href="/3-migratetotarget/3.2-migration/3.2.1-configtarget/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/1-prerequisites/1-console/"
+                href="/vi/3-migratetotarget/3.2-migration/3.2.1-configtarget/"
                 />
   </url><url>
-    <loc>/vi/2-oracle-aurora/1-conversion/1-connect-ec2/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <loc>/vi/4-serverless/4.1-migrate/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-oracle-aurora/1-conversion/1-connect-ec2/"
+                href="/4-serverless/4.1-migrate/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-oracle-aurora/1-conversion/1-connect-ec2/"
+                href="/vi/4-serverless/4.1-migrate/"
                 />
   </url><url>
-    <loc>/vi/2-oracle-aurora/2-migration/1-connect-source-db/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <loc>/vi/1-start/1.1-signin/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-oracle-aurora/2-migration/1-connect-source-db/"
+                href="/1-start/1.1-signin/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-oracle-aurora/2-migration/1-connect-source-db/"
+                href="/vi/1-start/1.1-signin/"
                 />
   </url><url>
-    <loc>/vi/2-oracle-aurora/2-migration/2-config-source-db/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <loc>/vi/2-selectsource/2.1-oracle/2.1.1-connectsrcdb/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-oracle-aurora/2-migration/2-config-source-db/"
+                href="/2-selectsource/2.1-oracle/2.1.1-connectsrcdb/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-oracle-aurora/2-migration/2-config-source-db/"
+                href="/vi/2-selectsource/2.1-oracle/2.1.1-connectsrcdb/"
                 />
   </url><url>
-    <loc>/vi/2-oracle-aurora/2-migration/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <loc>/vi/3-migratetotarget/3.2-migration/3.2.5-inspect/a-rdsmssql/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-oracle-aurora/2-migration/"
+                href="/3-migratetotarget/3.2-migration/3.2.5-inspect/a-rdsmssql/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-oracle-aurora/2-migration/"
+                href="/vi/3-migratetotarget/3.2-migration/3.2.5-inspect/a-rdsmssql/"
                 />
   </url><url>
-    <loc>/vi/3-cleanup/2-dms-endpoints/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <loc>/vi/2-selectsource/2.2-sqlsrv/2.2.1-connectsrcdb/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/3-cleanup/2-dms-endpoints/"
+                href="/2-selectsource/2.2-sqlsrv/2.2.1-connectsrcdb/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/3-cleanup/2-dms-endpoints/"
+                href="/vi/2-selectsource/2.2-sqlsrv/2.2.1-connectsrcdb/"
                 />
   </url><url>
-    <loc>/vi/2-oracle-aurora/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <loc>/vi/2-selectsource/2.1-oracle/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-oracle-aurora/"
+                href="/2-selectsource/2.1-oracle/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-oracle-aurora/"
+                href="/vi/2-selectsource/2.1-oracle/"
                 />
   </url><url>
-    <loc>/vi/2-oracle-aurora/1-conversion/2-aws-sct/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <loc>/vi/3-migratetotarget/3.1-schemaconv/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-oracle-aurora/1-conversion/2-aws-sct/"
+                href="/3-migratetotarget/3.1-schemaconv/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-oracle-aurora/1-conversion/2-aws-sct/"
+                href="/vi/3-migratetotarget/3.1-schemaconv/"
                 />
   </url><url>
-    <loc>/vi/1-prerequisites/2-create-kp/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <loc>/vi/3-migratetotarget/3.1-schemaconv/3.1.3-schemaconv/modifycode/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/1-prerequisites/2-create-kp/"
+                href="/3-migratetotarget/3.1-schemaconv/3.1.3-schemaconv/modifycode/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/1-prerequisites/2-create-kp/"
+                href="/vi/3-migratetotarget/3.1-schemaconv/3.1.3-schemaconv/modifycode/"
                 />
   </url><url>
-    <loc>/vi/2-oracle-aurora/2-migration/3-config-target-db/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <loc>/vi/4-serverless/4.2-scaletesting/4.2.1-generateload/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-oracle-aurora/2-migration/3-config-target-db/"
+                href="/4-serverless/4.2-scaletesting/4.2.1-generateload/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-oracle-aurora/2-migration/3-config-target-db/"
+                href="/vi/4-serverless/4.2-scaletesting/4.2.1-generateload/"
                 />
   </url><url>
-    <loc>/vi/1-prerequisites/3-config-env/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <loc>/vi/6-troubleshooting/6.1-memorypressure/6.1.1-environmentcreation/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/1-prerequisites/3-config-env/"
+                href="/6-troubleshooting/6.1-memorypressure/6.1.1-environmentcreation/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/1-prerequisites/3-config-env/"
+                href="/vi/6-troubleshooting/6.1-memorypressure/6.1.1-environmentcreation/"
                 />
   </url><url>
-    <loc>/vi/2-oracle-aurora/1-conversion/3-dms-project/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <loc>/vi/6-troubleshooting/6.2-tableerrors/6.2.1-environmentcreation/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-oracle-aurora/1-conversion/3-dms-project/"
+                href="/6-troubleshooting/6.2-tableerrors/6.2.1-environmentcreation/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-oracle-aurora/1-conversion/3-dms-project/"
+                href="/vi/6-troubleshooting/6.2-tableerrors/6.2.1-environmentcreation/"
                 />
   </url><url>
-    <loc>/vi/3-cleanup/3-replication-instance/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <loc>/vi/4-serverless/4.1-migrate/4.1.1-createmigration/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/3-cleanup/3-replication-instance/"
+                href="/4-serverless/4.1-migrate/4.1.1-createmigration/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/3-cleanup/3-replication-instance/"
+                href="/vi/4-serverless/4.1-migrate/4.1.1-createmigration/"
                 />
   </url><url>
-    <loc>/vi/3-cleanup/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <loc>/vi/7-cleanup/7.1-deleteserverlesstask/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/3-cleanup/"
+                href="/7-cleanup/7.1-deleteserverlesstask/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/3-cleanup/"
+                href="/vi/7-cleanup/7.1-deleteserverlesstask/"
                 />
   </url><url>
-    <loc>/vi/2-oracle-aurora/3-summary/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <loc>/vi/3-migratetotarget/3.2-migration/3.2.1-configtarget/b-auroramysql/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-oracle-aurora/3-summary/"
+                href="/3-migratetotarget/3.2-migration/3.2.1-configtarget/b-auroramysql/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-oracle-aurora/3-summary/"
+                href="/vi/3-migratetotarget/3.2-migration/3.2.1-configtarget/b-auroramysql/"
                 />
   </url><url>
-    <loc>/vi/2-oracle-aurora/1-conversion/4-convert/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <loc>/vi/3-migratetotarget/3.2-migration/3.2.5-inspect/b-auroramysql/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-oracle-aurora/1-conversion/4-convert/"
+                href="/3-migratetotarget/3.2-migration/3.2.5-inspect/b-auroramysql/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-oracle-aurora/1-conversion/4-convert/"
+                href="/vi/3-migratetotarget/3.2-migration/3.2.5-inspect/b-auroramysql/"
                 />
   </url><url>
-    <loc>/vi/3-cleanup/4-cf-stack/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <loc>/vi/4-serverless/4.1-migrate/4.1.2-replicationstages/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/3-cleanup/4-cf-stack/"
+                href="/4-serverless/4.1-migrate/4.1.2-replicationstages/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/3-cleanup/4-cf-stack/"
+                href="/vi/4-serverless/4.1-migrate/4.1.2-replicationstages/"
                 />
   </url><url>
-    <loc>/vi/2-oracle-aurora/2-migration/4-dms-replication/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <loc>/vi/6-troubleshooting/6.2-tableerrors/6.2.2-troubleshootingsteps/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-oracle-aurora/2-migration/4-dms-replication/"
+                href="/6-troubleshooting/6.2-tableerrors/6.2.2-troubleshootingsteps/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-oracle-aurora/2-migration/4-dms-replication/"
+                href="/vi/6-troubleshooting/6.2-tableerrors/6.2.2-troubleshootingsteps/"
                 />
   </url><url>
-    <loc>/vi/4-video/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <loc>/vi/2-selectsource/2.1-oracle/2.1.2-configsrcdb/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/4-video/"
+                href="/2-selectsource/2.1-oracle/2.1.2-configsrcdb/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/4-video/"
+                href="/vi/2-selectsource/2.1-oracle/2.1.2-configsrcdb/"
                 />
   </url><url>
-    <loc>/vi/2-oracle-aurora/2-migration/5-endpoints/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <loc>/vi/2-selectsource/2.2-sqlsrv/2.2.2-configsrcdb/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-oracle-aurora/2-migration/5-endpoints/"
+                href="/2-selectsource/2.2-sqlsrv/2.2.2-configsrcdb/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-oracle-aurora/2-migration/5-endpoints/"
+                href="/vi/2-selectsource/2.2-sqlsrv/2.2.2-configsrcdb/"
                 />
   </url><url>
-    <loc>/vi/2-oracle-aurora/2-migration/6-migration-task/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <loc>/vi/3-migratetotarget/3.2-migration/3.2.2-repinstance/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-oracle-aurora/2-migration/6-migration-task/"
+                href="/3-migratetotarget/3.2-migration/3.2.2-repinstance/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-oracle-aurora/2-migration/6-migration-task/"
+                href="/vi/3-migratetotarget/3.2-migration/3.2.2-repinstance/"
                 />
   </url><url>
-    <loc>/vi/2-oracle-aurora/2-migration/7-inspect-content/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <loc>/vi/3-migratetotarget/3.2-migration/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-oracle-aurora/2-migration/7-inspect-content/"
+                href="/3-migratetotarget/3.2-migration/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-oracle-aurora/2-migration/7-inspect-content/"
+                href="/vi/3-migratetotarget/3.2-migration/"
                 />
   </url><url>
-    <loc>/vi/2-oracle-aurora/2-migration/8-replicate-changes/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <loc>/vi/4-serverless/4.2-scaletesting/4.2.2-monitorupscale/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-oracle-aurora/2-migration/8-replicate-changes/"
+                href="/4-serverless/4.2-scaletesting/4.2.2-monitorupscale/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-oracle-aurora/2-migration/8-replicate-changes/"
+                href="/vi/4-serverless/4.2-scaletesting/4.2.2-monitorupscale/"
+                />
+  </url><url>
+    <loc>/vi/4-serverless/4.2-scaletesting/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/4-serverless/4.2-scaletesting/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/4-serverless/4.2-scaletesting/"
+                />
+  </url><url>
+    <loc>/vi/6-troubleshooting/6.2-tableerrors/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/6-troubleshooting/6.2-tableerrors/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/6-troubleshooting/6.2-tableerrors/"
+                />
+  </url><url>
+    <loc>/vi/2-selectsource/2.2-sqlsrv/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/2-selectsource/2.2-sqlsrv/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/2-selectsource/2.2-sqlsrv/"
+                />
+  </url><url>
+    <loc>/vi/2-selectsource/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/2-selectsource/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/2-selectsource/"
+                />
+  </url><url>
+    <loc>/vi/1-start/1.2-keypair/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/1-start/1.2-keypair/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/1-start/1.2-keypair/"
+                />
+  </url><url>
+    <loc>/vi/3-migratetotarget/3.1-schemaconv/3.1.2-createproject/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/3-migratetotarget/3.1-schemaconv/3.1.2-createproject/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/3-migratetotarget/3.1-schemaconv/3.1.2-createproject/"
+                />
+  </url><url>
+    <loc>/vi/5-monitoring/5.2-eventnotifications/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/5-monitoring/5.2-eventnotifications/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/5-monitoring/5.2-eventnotifications/"
+                />
+  </url><url>
+    <loc>/vi/6-troubleshooting/6.1-memorypressure/6.1.2-troubleshootingsteps/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/6-troubleshooting/6.1-memorypressure/6.1.2-troubleshootingsteps/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/6-troubleshooting/6.1-memorypressure/6.1.2-troubleshootingsteps/"
+                />
+  </url><url>
+    <loc>/vi/7-cleanup/7.2-deletedmstask/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/7-cleanup/7.2-deletedmstask/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/7-cleanup/7.2-deletedmstask/"
+                />
+  </url><url>
+    <loc>/vi/3-migratetotarget/3.2-migration/3.2.1-configtarget/c-aurorapostgres/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/3-migratetotarget/3.2-migration/3.2.1-configtarget/c-aurorapostgres/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/3-migratetotarget/3.2-migration/3.2.1-configtarget/c-aurorapostgres/"
+                />
+  </url><url>
+    <loc>/vi/3-migratetotarget/3.2-migration/3.2.5-inspect/c-aurorapostgres/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/3-migratetotarget/3.2-migration/3.2.5-inspect/c-aurorapostgres/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/3-migratetotarget/3.2-migration/3.2.5-inspect/c-aurorapostgres/"
+                />
+  </url><url>
+    <loc>/vi/3-migratetotarget/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/3-migratetotarget/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/3-migratetotarget/"
+                />
+  </url><url>
+    <loc>/vi/1-start/1.3-cfnenv/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/1-start/1.3-cfnenv/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/1-start/1.3-cfnenv/"
+                />
+  </url><url>
+    <loc>/vi/3-migratetotarget/3.1-schemaconv/3.1.3-schemaconv/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/3-migratetotarget/3.1-schemaconv/3.1.3-schemaconv/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/3-migratetotarget/3.1-schemaconv/3.1.3-schemaconv/"
+                />
+  </url><url>
+    <loc>/vi/3-migratetotarget/3.2-migration/3.2.3-createendpoint/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/3-migratetotarget/3.2-migration/3.2.3-createendpoint/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/3-migratetotarget/3.2-migration/3.2.3-createendpoint/"
+                />
+  </url><url>
+    <loc>/vi/6-troubleshooting/6.1-memorypressure/6.1.3-resolution/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/6-troubleshooting/6.1-memorypressure/6.1.3-resolution/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/6-troubleshooting/6.1-memorypressure/6.1.3-resolution/"
+                />
+  </url><url>
+    <loc>/vi/6-troubleshooting/6.2-tableerrors/6.2.3-resolution/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/6-troubleshooting/6.2-tableerrors/6.2.3-resolution/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/6-troubleshooting/6.2-tableerrors/6.2.3-resolution/"
+                />
+  </url><url>
+    <loc>/vi/4-serverless/4.2-scaletesting/4.2.3-monitordownscale/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/4-serverless/4.2-scaletesting/4.2.3-monitordownscale/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/4-serverless/4.2-scaletesting/4.2.3-monitordownscale/"
+                />
+  </url><url>
+    <loc>/vi/5-monitoring/5.3-tablestatistics/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/5-monitoring/5.3-tablestatistics/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/5-monitoring/5.3-tablestatistics/"
+                />
+  </url><url>
+    <loc>/vi/7-cleanup/7.3-deleteendpoints/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/7-cleanup/7.3-deleteendpoints/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/7-cleanup/7.3-deleteendpoints/"
+                />
+  </url><url>
+    <loc>/vi/3-migratetotarget/3.2-migration/3.2.4-createtask/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/3-migratetotarget/3.2-migration/3.2.4-createtask/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/3-migratetotarget/3.2-migration/3.2.4-createtask/"
+                />
+  </url><url>
+    <loc>/vi/7-cleanup/7.4-deleterepinstance/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/7-cleanup/7.4-deleterepinstance/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/7-cleanup/7.4-deleterepinstance/"
+                />
+  </url><url>
+    <loc>/vi/1-start/1.4-ec2connect/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/1-start/1.4-ec2connect/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/1-start/1.4-ec2connect/"
+                />
+  </url><url>
+    <loc>/vi/3-migratetotarget/3.2-migration/3.2.5-inspect/d-oracle/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/3-migratetotarget/3.2-migration/3.2.5-inspect/d-oracle/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/3-migratetotarget/3.2-migration/3.2.5-inspect/d-oracle/"
+                />
+  </url><url>
+    <loc>/vi/4-serverless/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/4-serverless/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/4-serverless/"
+                />
+  </url><url>
+    <loc>/vi/5-monitoring/5.4-tasklogs/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/5-monitoring/5.4-tasklogs/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/5-monitoring/5.4-tasklogs/"
+                />
+  </url><url>
+    <loc>/vi/3-migratetotarget/3.2-migration/3.2.5-inspect/e-s3/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/3-migratetotarget/3.2-migration/3.2.5-inspect/e-s3/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/3-migratetotarget/3.2-migration/3.2.5-inspect/e-s3/"
+                />
+  </url><url>
+    <loc>/vi/5-monitoring/5.5-taskstatus/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/5-monitoring/5.5-taskstatus/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/5-monitoring/5.5-taskstatus/"
+                />
+  </url><url>
+    <loc>/vi/7-cleanup/7.5-deletecfnstack/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/7-cleanup/7.5-deletecfnstack/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/7-cleanup/7.5-deletecfnstack/"
+                />
+  </url><url>
+    <loc>/vi/3-migratetotarget/3.2-migration/3.2.5-inspect/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/3-migratetotarget/3.2-migration/3.2.5-inspect/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/3-migratetotarget/3.2-migration/3.2.5-inspect/"
+                />
+  </url><url>
+    <loc>/vi/5-monitoring/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/5-monitoring/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/5-monitoring/"
+                />
+  </url><url>
+    <loc>/vi/7-cleanup/7.6-deletebucketandrole/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/7-cleanup/7.6-deletebucketandrole/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/7-cleanup/7.6-deletebucketandrole/"
+                />
+  </url><url>
+    <loc>/vi/3-migratetotarget/3.2-migration/3.2.6-replicatechange/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/3-migratetotarget/3.2-migration/3.2.6-replicatechange/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/3-migratetotarget/3.2-migration/3.2.6-replicatechange/"
+                />
+  </url><url>
+    <loc>/vi/5-monitoring/5.6-runbook/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/5-monitoring/5.6-runbook/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/5-monitoring/5.6-runbook/"
+                />
+  </url><url>
+    <loc>/vi/6-troubleshooting/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/6-troubleshooting/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/6-troubleshooting/"
+                />
+  </url><url>
+    <loc>/vi/7-cleanup/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/7-cleanup/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/7-cleanup/"
                 />
   </url><url>
     <loc>/vi/categories/</loc>

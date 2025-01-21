@@ -1,10 +1,305 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Di chuyển Database trên AWS on DI CHUYỂN DATABASE TRÊN AWS</title>
+    <title>Chuyển đổi lược đồ và di dời CSDL on AWS Workshop - Di chuyển dữ liệu</title>
     <link>/vi/</link>
-    <description>Recent content in Di chuyển Database trên AWS on DI CHUYỂN DATABASE TRÊN AWS</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 01 Jan 1970 07:33:40 +0700</lastBuildDate><atom:link href="/vi/index.xml" rel="self" type="application/rss+xml" />
+    <description>Recent content in Chuyển đổi lược đồ và di dời CSDL on AWS Workshop - Di chuyển dữ liệu</description>
+    <generator>Hugo</generator>
+    <language>vi</language>
+    <atom:link href="/vi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Các số liệu trên CloudWatch</title>
+      <link>/vi/5-monitoring/5.1-cloudwatchmetrics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/vi/5-monitoring/5.1-cloudwatchmetrics/</guid>
+      <description>&lt;p&gt;AWS DMS cung cấp cho bạn khả năng giám sát hiệu suất của &lt;strong&gt;quá trình di chuyển DMS&lt;/strong&gt; thông qua &lt;strong&gt;số liệu CloudWatch&lt;/strong&gt;. Có nhiều số liệu khác nhau có sẵn ở &lt;strong&gt;mức độ tác vụ &amp;amp; máy sao chép&lt;/strong&gt;.&lt;/p&gt;&#xA;&#xD;&#xA;&lt;div class=&#34;notices info&#34; &gt;&lt;p&gt;Số liệu CloudWatch cho trình sao chép chép DMS có thể hữu ích trong việc xác định mức tiêu thụ tài nguyên trên trình sao chép chép DMS. &lt;strong&gt;Mức sử dụng CPU, Bộ nhớ có thể giải phóng, Không gian lưu trữ trống,&lt;/strong&gt; v.v. là một số số liệu chính mà bạn có thể muốn theo dõi. Số liệu CloudWatch cho các tác vụ DMS có thể hữu ích trong việc xác định hiệu suất. DMS cung cấp các số liệu khác nhau cho Tải đầy đủ, CDC, Xác thực &amp;amp; Tác động đến trình sao chép chép. Vui lòng tham khảo tài liệu Giám sát AWS DMS để biết chi tiết về từng số liệu.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cấp quyền trong CSDL đich</title>
+      <link>/vi/3-migratetotarget/3.1-schemaconv/3.1.1-configmysql/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/vi/3-migratetotarget/3.1-schemaconv/3.1.1-configmysql/</guid>
+      <description>&lt;div class=&#34;notices info&#34; &gt;&lt;p&gt;Phần này chỉ dành cho CSDL đích Aurora (tương thích với MySQL). Nếu bạn đang di chuyển đến CSDL đích khác, bạn có thể bỏ qua trang này.&lt;/p&gt;&#xA;&lt;/div&gt;&#xD;&#xA;&#xA;&#xD;&#xA;&lt;div class=&#34;expand&#34;&gt;&#xD;&#xA;    &lt;div class=&#34;expand-label&#34; style=&#34;cursor: pointer;&#34; onclick=&#34;$h = $(this);$h.next(&#39;div&#39;).slideToggle(100,function () {$h.children(&#39;i&#39;).attr(&#39;class&#39;,function () {return $h.next(&#39;div&#39;).is(&#39;:visible&#39;) ? &#39;fas fa-chevron-down&#39; : &#39;fas fa-chevron-right&#39;;});});&#34;&gt;&#xD;&#xA;        &lt;i style=&#34;font-size:x-small;&#34; class=&#34;fas fa-chevron-right&#34;&gt;&lt;/i&gt;&#xD;&#xA;        &lt;span&gt;&#xD;&#xA;        &#xD;&#xA;    &#x9;&#xD;&#xA;    &#x9;Mở phần này nếu lược đồ đích của bạn là Aurora MySQL&#xD;&#xA;    &#x9;&#xD;&#xA;    &#x9;&lt;/span&gt;&#xD;&#xA;    &lt;/div&gt;&#xD;&#xA;    &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;&#xD;&#xA;        &lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Mở &lt;strong&gt;MySQL Workbench 8.0 CE&lt;/strong&gt; từ bên trong máy chủ EC2 và tạo kết nối cơ sở dữ liệu mới cho cơ sở dữ liệu Aurora mục tiêu bằng các giá trị sau. Xin lưu ý rằng mật khẩu không được cung cấp bên dưới, bạn cần vào &lt;strong&gt;Secrets Manager&lt;/strong&gt; và mở &lt;strong&gt;DMSDBSecret&lt;/strong&gt; và hiển thị mật khẩu SQL Server. Nó cũng nằm trên tab đầu ra của Cloudformation Stack đầu tiên trong mật khẩu SQL Server (đúng là mysql nhưng mật khẩu giống nhau cho sql server &amp;amp; mysql trong trường hợp này):&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cấu hình cơ sở dữ liệu đích (RDS Microsoft SQL Server)</title>
+      <link>/vi/3-migratetotarget/3.2-migration/3.2.1-configtarget/a-rds-mssql/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/vi/3-migratetotarget/3.2-migration/3.2.1-configtarget/a-rds-mssql/</guid>
+      <description>&lt;div class=&#34;notices info&#34; &gt;&lt;p&gt;Hướng dẫn này chỉ dành cho việc di chuyển đến mục tiêu RDS Microsoft SQL Server. Nếu cơ sở dữ liệu đichs sử dụng lược đồ khác, bạn có thể bỏ qua trang này.&lt;/p&gt;&#xA;&lt;/div&gt;&#xD;&#xA;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Bây giờ, trên phiên bản EC2 mà chúng ta đã kết nối qua RDP, chúng ta sẽ kết nối với cơ sở dữ liệu mục tiêu SQL Server RDS. Trong SQL Server Management Studio, chọn SQL Server Authentication và kết nối với phiên bản SQL Server RDS bằng các tham số sau. Lưu ý rằng mật khẩu không được cung cấp bên dưới, bạn cần vào Secrets Manager và mở DMSDBSecret và hiển thị mật khẩu SQL Server. Nó cũng nằm trên tab &lt;strong&gt;Output&lt;/strong&gt; của Cloudformation Stack đầu tiên bên dưới mật khẩu SQL Server.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Kết nối tới CSDL nguồn Oracle</title>
+      <link>/vi/2-selectsource/2.1-oracle/2.1.1-connectsrcdb/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/vi/2-selectsource/2.1-oracle/2.1.1-connectsrcdb/</guid>
+      <description>&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Sau khi kết nối, hãy mở &lt;strong&gt;Oracle SQL Developer&lt;/strong&gt; từ &lt;strong&gt;Thanh tác vụ&lt;/strong&gt;. Lưu ý rằng các biểu tượng của bạn có thể theo thứ tự khác với hình ảnh bên dưới.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;/images/2/1/1/0001.png?width=50pc&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Nhấp vào &lt;strong&gt;dấu cộng&lt;/strong&gt; từ menu bên trái để tạo &lt;strong&gt;Kết nối mới đến cơ sở dữ liệu&lt;/strong&gt; bằng các giá trị sau, Xin lưu ý rằng mật khẩu không được cung cấp bên dưới, bạn cần phải vào &lt;strong&gt;Secrets Manager&lt;/strong&gt; và mở &lt;strong&gt;DMSDBSecret&lt;/strong&gt; và hiển thị mật khẩu. Nó cũng nằm trên tab đầu ra của Cloudformation Stack đầu tiên (lưu ý rằng nó giống nhau nếu bạn đã lấy nó từ đó) sau đó nhấp vào &lt;strong&gt;Kết nối&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Microsoft SQL Server target</title>
+      <link>/vi/3-migratetotarget/3.2-migration/3.2.5-inspect/a-rdsmssql/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/vi/3-migratetotarget/3.2-migration/3.2.5-inspect/a-rdsmssql/</guid>
+      <description>&lt;p&gt;Trong trang này, bạn sẽ kiểm tra cơ sở dữ liệu mục tiêu sau khi di chuyển.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Mở Microsoft SQL Server Management Studio từ máy chủ EC2 mà bạn đã kết nối qua RDP.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Thực hiện theo hướng dẫn đã mô tả trước đó để kết nối với phiên bản RDS SQL Server mục tiêu.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Kiểm tra nội dung của cơ sở dữ liệu RDS SQL đã di chuyển (dms_sample_target) và đảm bảo rằng các bảng sau đã được di chuyển. Bạn có thể làm điều đó bằng cách mở một cửa sổ Truy vấn Mới để thực hiện câu lệnh sau.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Mở SQL Server Management Studio</title>
+      <link>/vi/2-selectsource/2.2-sqlsrv/2.2.1-connectsrcdb/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/vi/2-selectsource/2.2-sqlsrv/2.2.1-connectsrcdb/</guid>
+      <description>&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Sau khi kết nối với máy ảo EC2 Remote Desktop, hãy mở &lt;strong&gt;SQL Server Management Studio&lt;/strong&gt; từ &lt;strong&gt;Thanh tác vụ&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;/images/2/2/1/0001.png?width=90pc&#34; alt=&#34;Find the SQL Server Management Studio&#34;&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Sử dụng các thông tin sau để kết nối với cơ sở dữ liệu nguồn của bạn.&lt;/p&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Parameter&lt;/th&gt;&#xA;          &lt;th&gt;Value&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Server Type&lt;/td&gt;&#xA;          &lt;td&gt;Database Engine&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Server Name&lt;/td&gt;&#xA;          &lt;td&gt;localhost&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Authorization&lt;/td&gt;&#xA;          &lt;td&gt;Windows Authentication&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;p&gt;&lt;img src=&#34;/images/2/2/1/0002.png?width=90pc&#34; alt=&#34;Enter the information&#34;&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Sau khi bạn thấy trạng thái kiểm tra là &lt;strong&gt;Successful&lt;/strong&gt; (thành công), hãy nhấp vào &lt;strong&gt;Connect&lt;/strong&gt; (kết nối). Cửa sổ của bạn sẽ trông như bên dưới.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Sửa mã thủ tục</title>
+      <link>/vi/3-migratetotarget/3.1-schemaconv/3.1.3-schemaconv/modifycode/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/vi/3-migratetotarget/3.1-schemaconv/3.1.3-schemaconv/modifycode/</guid>
+      <description>&lt;p&gt;Trong phần này, chúng ta hỗ trợ sửa đổi mã thủ tục cho SQL Server mà Schema Conversion Tool không thể tự động chuyển đổi cho phương ngữ cơ sở dữ liệu đích.&lt;/p&gt;&#xA;&#xD;&#xA;&lt;div class=&#34;notices info&#34; &gt;&lt;p&gt;Ba bước đầu tiên chỉ dành cho nguồn SQL Server. Nếu bạn sử dụng nguồn Oracle, bạn có thể bỏ qua bước 4.&lt;/p&gt;&#xA;&lt;/div&gt;&#xD;&#xA;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Từ bảng điều khiển bên trái, bỏ chọn các mục có dấu chấm than ngoại trừ thủ tục generateTransferActivity.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tạo khối lượng xử lý trên CSDL nguồn</title>
+      <link>/vi/4-serverless/4.2-scaletesting/4.2.1-generateload/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/vi/4-serverless/4.2-scaletesting/4.2.1-generateload/</guid>
+      <description>&lt;h3 id=&#34;dừng-và-sửa-đổi-tác-vụ-không-có-máy-chủ-dms&#34;&gt;Dừng và Sửa đổi Tác vụ Không có Máy chủ DMS&lt;/h3&gt;&#xA;&lt;p&gt;Trước khi tạo tải trên cơ sở dữ liệu Nguồn, trước tiên &lt;strong&gt;dừng tác vụ di chuyển dữ liệu không có máy chủ DMS đang chạy&lt;/strong&gt; để chúng tôi có thể thay đổi một số cài đặt của tác vụ Không có Máy chủ DMS&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Dừng tác vụ đang chạy:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Nhấp vào &lt;strong&gt;Actions&lt;/strong&gt;, sau đó chọn &lt;strong&gt;Stop&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;/images/4/2/1/0001.png?width=80pc&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Sửa đổi cài đặt tác vụ:&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tạo môi trường</title>
+      <link>/vi/6-troubleshooting/6.1-memorypressure/6.1.1-environmentcreation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/vi/6-troubleshooting/6.1-memorypressure/6.1.1-environmentcreation/</guid>
+      <description>&lt;p&gt;Như đã đề cập trước đó, áp lực bộ nhớ trên phiên bản DMS có thể xảy ra khi tác vụ di chuyển đặt tải trọng cao lên phiên bản DMS và bộ nhớ được phân bổ không đủ để xử lý khối lượng công việc. Do đó, để tạo lại tình huống này, chúng ta sẽ đặt tải thông qua tác vụ DMS.&lt;/p&gt;&#xA;&#xD;&#xA;&lt;div class=&#34;notices info&#34; &gt;&lt;p&gt;Trong bài tập khắc phục sự cố này, chúng ta sẽ sử dụng các tài nguyên (tác vụ DMS/phiên bản RDS, v.v.) được tạo trong phòng thí nghiệm &lt;a href=&#34;../../3-SelectTarget/3.1-AuroraMySQL/&#34;&gt;&lt;strong&gt;&lt;em&gt;Oracle Source to Amazon Aurora (PostgreSQL) Target&lt;/em&gt;&lt;/strong&gt;&lt;/a&gt;. Tuy nhiên, nếu bạn đang theo dõi bất kỳ phòng thí nghiệm nào khác với bất kỳ công cụ nguồn/đích RDBMS nào khác, hãy thoải mái tiếp tục sử dụng các tài nguyên đó.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tạo môi trường</title>
+      <link>/vi/6-troubleshooting/6.2-tableerrors/6.2.1-environmentcreation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/vi/6-troubleshooting/6.2-tableerrors/6.2.1-environmentcreation/</guid>
+      <description>&lt;div class=&#34;notices note&#34; &gt;&lt;p&gt;Trong bài tập khắc phục sự cố này, chúng ta sẽ sử dụng các tài nguyên (tác vụ DMS/phiên bản RDS, v.v.) được tạo trong phòng thí nghiệm Oracle Source to Target Amazon Aurora (PostgreSQL). Tuy nhiên, nếu bạn đang theo dõi bất kỳ phòng thí nghiệm nào khác với bất kỳ công cụ mục tiêu RDBMS nào khác, hãy thoải mái tiếp tục sử dụng các tài nguyên đó.&#xA;&lt;br&gt;&#xA;Chúng tôi giả định rằng bạn đã tạo tác vụ DMS bằng bài thực hành này và cũng đã hoàn tất di chuyển một lần.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tạo quá trình dịch chuyển serverless</title>
+      <link>/vi/4-serverless/4.1-migrate/4.1.1-createmigration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/vi/4-serverless/4.1-migrate/4.1.1-createmigration/</guid>
+      <description>&lt;p&gt;Trong hướng dẫn từng bước này, bạn sẽ tạo Serverless Replication để di chuyển dữ liệu từ cơ sở dữ liệu Oracle hoặc SQL Server sang Amazon Aurora (tương thích với MySQL hoặc PostgreSQL).&lt;/p&gt;&#xA;&lt;p&gt;Môi trường cho phòng thí nghiệm này bao gồm:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Cơ sở dữ liệu nguồn (SQL Server hoặc Oracle).&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Một phiên bản Amazon Aurora được sử dụng làm cơ sở dữ liệu đích.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Truy cập &lt;a href=&#34;https://console.aws.amazon.com/dms/v2/&#34;&gt;AWS DMS Console&lt;/a&gt;.&#xA;Trên trang &lt;strong&gt;AWS DMS Console&lt;/strong&gt;, nhấp vào &lt;strong&gt;Serverless replication&lt;/strong&gt;. &lt;strong&gt;AWS DMS Serverless Replication&lt;/strong&gt; là một khái niệm mới tóm tắt các phiên bản và tác vụ thường thấy trong AWS DMS chuẩn.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Xóa Serverless Migration Task</title>
+      <link>/vi/7-cleanup/7.1-deleteserverlesstask/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/vi/7-cleanup/7.1-deleteserverlesstask/</guid>
+      <description>&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Nhấp vào đây để đi đến &lt;a href=&#34;https://console.aws.amazon.com/dms/v2/&#34;&gt;Bảng điều khiển DMS&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Trên menu bên trái, nhấp vào &lt;strong&gt;Serverless replications&lt;/strong&gt; và chọn từng bản sao mà bạn đã tạo nếu bạn đã tạo nhiều bản sao.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Nhấp vào nút &lt;strong&gt;Actions&lt;/strong&gt; ở phía bên phải, sau đó chọn &lt;strong&gt;Stop&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Xác nhận rằng bạn muốn dừng quá trình sao chép.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Sau khi trạng thái của quá trình sao chép thay đổi thành &lt;strong&gt;Stopped&lt;/strong&gt;, hãy nhấp vào nút &lt;strong&gt;Actions&lt;/strong&gt; một lần nữa, sau đó chọn &lt;strong&gt;Delete&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Aurora (MySQL compatible) target</title>
+      <link>/vi/3-migratetotarget/3.2-migration/3.2.1-configtarget/b-auroramysql/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/vi/3-migratetotarget/3.2-migration/3.2.1-configtarget/b-auroramysql/</guid>
+      <description>&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Mở MySQL Workbench 8.0 CE đã sử dụng trước đó để thêm các quyền cần thiết cho Aurora MySQL làm mục tiêu DMS.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;/images/3/2/1/b/0001.png?width=80pc&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Trong bước này, bạn sẽ xóa ràng buộc khóa ngoại khỏi cơ sở dữ liệu đích:&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Từ bên trong MySQL Workbench, mở cửa sổ truy vấn và sao chép và dán mã bên dưới vào cửa sổ truy vấn rồi thực thi.&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;&lt;strong&gt;Lưu ý:&lt;/strong&gt; Bạn chỉ cần mở rộng các phần hướng dẫn cho CSDL nguồn bạn đã chọn và có thể bỏ qua các phần cho CSDL khác.&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Aurora (MySQL compatible) target</title>
+      <link>/vi/3-migratetotarget/3.2-migration/3.2.5-inspect/b-auroramysql/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/vi/3-migratetotarget/3.2-migration/3.2.5-inspect/b-auroramysql/</guid>
+      <description>&lt;p&gt;In this page, you will inspect the target database after migration.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Open &lt;strong&gt;MySQL Workbench 8.0 CE&lt;/strong&gt; from within the EC2 server, and click on Target Aurora RDS (MySQL) database connection that you created earlier.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Inspect the migrated data, by querying one of the tables in the target database. For example, the following query should return a table with two rows:&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;&lt;strong&gt;Note:&lt;/strong&gt; expand only for the source in your scenario you can skip the other sources.&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AWS DMS Serverless - Các giai đoạn sao chép</title>
+      <link>/vi/4-serverless/4.1-migrate/4.1.2-replicationstages/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/vi/4-serverless/4.1-migrate/4.1.2-replicationstages/</guid>
+      <description>&lt;p&gt;Để xử lý các tài nguyên cần thiết cho việc sao chép dữ liệu, AWS DMS Serverless chuyển đổi qua các giai đoạn khác nhau phản ánh các quy trình nội bộ của dịch vụ. Khi bắt đầu sao chép, AWS DMS Serverless sẽ đánh giá khối lượng công việc, phân bổ các tài nguyên cần thiết và bắt đầu sao chép dữ liệu dựa trên các trạng thái sau.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Các bước tìm lỗi</title>
+      <link>/vi/6-troubleshooting/6.2-tableerrors/6.2.2-troubleshootingsteps/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/vi/6-troubleshooting/6.2-tableerrors/6.2.2-troubleshootingsteps/</guid>
+      <description>&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Khi bạn điều tra bất kỳ sự cố di chuyển DMS nào, hãy bắt đầu điều tra bằng cách xem lại trạng thái hiện tại của tác vụ. Để xem lại trạng thái tác vụ, hãy điều hướng đến &lt;a href=&#34;https://console.aws.amazon.com/dms/v2/&#34;&gt;&lt;strong&gt;Bảng điều khiển AWS DMS&lt;/strong&gt;&lt;/a&gt; và chọn tác vụ DMS từ danh sách. Bạn sẽ thấy trạng thái của từng tác vụ trong danh sách.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;/images/6/2/2/0002.png?width=80pc&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Trạng thái tác vụ DMS &lt;strong&gt;Running with errors&lt;/strong&gt; hoặc &lt;strong&gt;Error&lt;/strong&gt; có nghĩa là một hoặc nhiều bảng trong tác vụ được chuyển sang trạng thái lỗi. Khi DMS đánh dấu bất kỳ bảng nào ở trạng thái lỗi, theo mặc định, bảng đó sẽ bị tạm dừng di chuyển và DMS dừng di chuyển cho bảng đó nhưng tiếp tục di chuyển cho các bảng khác trong phạm vi. Bất cứ khi nào xảy ra lỗi bảng, DMS sẽ ghi lại cảnh báo và thông báo liên quan trong log tác vụ DMS. Do đó, để khắc phục sự cố thêm, hãy mở log tác vụ DMS.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cấu hình CSDL nguồn</title>
+      <link>/vi/2-selectsource/2.1-oracle/2.1.2-configsrcdb/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/vi/2-selectsource/2.1-oracle/2.1.2-configsrcdb/</guid>
+      <description>&lt;p&gt;Để sử dụng Oracle làm nguồn cho &lt;strong&gt;AWS Database Migration Service (AWS DMS)&lt;/strong&gt;, trước tiên bạn phải cung cấp quyền đọc và ghi trên cơ sở dữ liệu Oracle cho một tài khoản người dùng DMS.&lt;/p&gt;&#xA;&lt;p&gt;Bạn cũng cần đảm bảo rằng chế độ &lt;strong&gt;ArchiveLog&lt;/strong&gt; được bật để cung cấp thông tin cho &lt;strong&gt;&lt;em&gt;LogMiner&lt;/em&gt;&lt;/strong&gt;. AWS DMS sử dụng LogMiner để đọc thông tin từ log lưu trữ để AWS DMS có thể ghi lại các thay đổi.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cấu hình CSDL nguồn - MS SQL Server</title>
+      <link>/vi/2-selectsource/2.2-sqlsrv/2.2.2-configsrcdb/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/vi/2-selectsource/2.2-sqlsrv/2.2.2-configsrcdb/</guid>
+      <description>&lt;div class=&#34;notices info&#34; &gt;&lt;p&gt;Khi dịch chuyển cơ sở dữ liệu Microsoft SQL Server của bạn bằng AWS DMS, bạn có thể chọn chỉ di chuyển dữ liệu hiện có, di chuyển dữ liệu hiện có và sao chép các thay đổi đang diễn ra hoặc di chuyển dữ liệu hiện có và sử dụng chức năng sao lưu dữ liệu đang thay đổi (Change Data Capture - CDC) để sao chép các thay đổi đang diễn ra. Việc dịch chuyển dữ liệu đã có không yêu cầu bất kỳ cấu hình nào trên cơ sở dữ liệu SQL Server nguồn. Tuy nhiên, để di chuyển dữ liệu hiện có và sao chép các thay đổi đang diễn ra, bạn cần bật MS-REPLICATION hoặc MS-CDC.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Create a replication instance</title>
+      <link>/vi/3-migratetotarget/3.2-migration/3.2.2-repinstance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/vi/3-migratetotarget/3.2-migration/3.2.2-repinstance/</guid>
+      <description>&lt;p&gt;Lược đồ sau minh họa góc nhìn thượng tầng của quá trình di dời dữ liệu.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;/images/3/2/2/0001.png?width=50pc&#34; alt=&#34;Data Migration Diagram&#34;&gt;&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Điều hướng đến &lt;a href=&#34;https://console.aws.amazon.com/dms/v2/&#34;&gt;Bảng điều khiển DMS&lt;/a&gt; hoặc gõ DMS vào thanh tìm kiếm ở góc trên bên trái của màn hình.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;/images/3/2/2/0002.png?width=90pc&#34; alt=&#34;Thay đổi mã quy trình&#34;&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Trong menu bên trái, nhấp vào &lt;strong&gt;Replication instances&lt;/strong&gt;. Điều này sẽ mở màn hình phiên bản sao chép.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Lưu ý rằng chúng tôi đã tạo sẵn một phiên bản sao chép DMS cho bạn, vì vậy bạn có thể bỏ qua phần này hoặc nếu bạn muốn trải nghiệm việc xây dựng một phiên bản sao chép DMS, hãy tiếp tục.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Giám sát sự kiện mở rộng quy mô</title>
+      <link>/vi/4-serverless/4.2-scaletesting/4.2.2-monitorupscale/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/vi/4-serverless/4.2-scaletesting/4.2.2-monitorupscale/</guid>
+      <description>&lt;p&gt;Khi tải DML được tạo trên cơ sở dữ liệu nguồn, hãy theo dõi bảng điều khiển AWS DMS và bảng thông tin CloudWatch để biết mức sử dụng dung lượng DMS. Khi tải vượt quá &lt;strong&gt;80%&lt;/strong&gt;, bạn sẽ thấy sự kiện Scale-up được kích hoạt.&lt;/p&gt;&#xA;&lt;h3 id=&#34;biểu-đồ-sử-dụng-dung-lượng&#34;&gt;Biểu đồ sử dụng dung lượng&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Để truy cập số liệu CloudWatch cho DMS Serverless Replication, hãy điều hướng đến bảng điều khiển AWS DMS, chọn &lt;strong&gt;&amp;ldquo;Serverless replications&amp;rdquo;&lt;/strong&gt; trong thanh bên trái, chọn bản sao không có máy chủ của bạn và tìm biểu đồ &lt;strong&gt;Capacity Utilization&lt;/strong&gt; trong tab &lt;strong&gt;Monitoring&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tạo dự án trong SCT</title>
+      <link>/vi/3-migratetotarget/3.1-schemaconv/3.1.2-createproject/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/vi/3-migratetotarget/3.1-schemaconv/3.1.2-createproject/</guid>
+      <description>&lt;p&gt;Bây giờ bạn đã cài đặt Công cụ SCT, bước tiếp theo là tạo Dự án di chuyển cơ sở dữ liệu bằng công cụ này.&lt;/p&gt;&#xA;&lt;h3 id=&#34;xác-định-csdl-nguồn&#34;&gt;Xác định CSDL nguồn&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Trong Schema Conversion Tool, nếu trình hướng dẫn dự án mới không khởi động, vui lòng khởi động bằng cách vào &lt;strong&gt;File &amp;gt; New Project Wizard&lt;/strong&gt; góc trên bên trái. Khi ở chế độ &lt;strong&gt;Project wizard&lt;/strong&gt;, vui lòng nhập các giá trị sau vào ghi chú biểu mẫu mà bạn cần điều chỉnh cho cơ sở dữ liệu nguồn mà bạn đã chọn trong văn bản bên dưới, sau đó nhấp vào &lt;strong&gt;Next&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Thông báo sự kiện</title>
+      <link>/vi/5-monitoring/5.2-eventnotifications/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/vi/5-monitoring/5.2-eventnotifications/</guid>
+      <description>&lt;p&gt;AWS DMS tạo ra nhiều sự kiện khác nhau ở cấp độ tác vụ và phiên bản DMS mà bạn có thể đăng ký. AWS DMS sử dụng Amazon Simple Notification Service (Amazon SNS) để cung cấp thông báo khi sự kiện AWS DMS xảy ra.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Để tạo &lt;strong&gt;DMS event notification&lt;/strong&gt;, trước tiên bạn phải tạo ****event subscriptions (bản theo dõi sự kiện)**. Để tạo đăng ký sự kiện DMS, hãy truy cập &lt;a href=&#34;https://console.aws.amazon.com/dms/v2/home#dashboard&#34;&gt;&lt;strong&gt;Bảng điều khiển AWS DMS&lt;/strong&gt;&lt;/a&gt; và nhấp vào &lt;strong&gt;Event Subscriptions&lt;/strong&gt; ở cột bên trái. Nhấp vào nút &lt;strong&gt;Create event subscription&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Troubleshooting Steps</title>
+      <link>/vi/6-troubleshooting/6.1-memorypressure/6.1.2-troubleshootingsteps/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/vi/6-troubleshooting/6.1-memorypressure/6.1.2-troubleshootingsteps/</guid>
+      <description>&lt;p&gt;Bất kể nguyên nhân gây ra lỗi là gì, quá trình khắc phục sự cố nên thực hiện theo các bước dưới đây:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Làm mới trang &lt;strong&gt;DMS tasks&lt;/strong&gt; &amp;amp; xác minh trạng thái nhiệm vụ DMS. Nếu nhiệm vụ ở trạng thái &lt;strong&gt;Failed (Thất bại)&lt;/strong&gt;, điều đó có nghĩa là DMS đã dừng xử lý nhiệm vụ và dừng lại do lỗi.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;/images/6/1/2/0000.png?width=80pc&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Khi nhiệm vụ ở trạng thái &lt;strong&gt;Failed&lt;/strong&gt;, hãy xác minh xem có bất kỳ thông báo nào được gửi bởi nhiệm vụ DMS không. Bạn có thể xem thông báo này trong mục Thông báo lỗi cuối cùng trên trang &lt;strong&gt;DMS tasks&lt;/strong&gt;. Trong trường hợp này, rất rõ ràng là nhiệm vụ bị lỗi do sự cố hết bộ nhớ.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Xóa Database Migration Task</title>
+      <link>/vi/7-cleanup/7.2-deletedmstask/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/vi/7-cleanup/7.2-deletedmstask/</guid>
+      <description>&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Đi đến &lt;a href=&#34;https://console.aws.amazon.com/dms/v2/&#34;&gt;Bảng điều khiển DMS&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Trên menu bên trái, nhấp vào &lt;strong&gt;Database migration tasks&lt;/strong&gt; và chọn các nhiệm vụ di chuyển mà bạn đã tạo từng cái một nếu bạn đã tạo nhiều cái.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Nhấp vào nút &lt;strong&gt;Actions&lt;/strong&gt; ở phía bên phải, sau đó chọn &lt;strong&gt;Stop&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Xác nhận rằng bạn muốn dừng nhiệm vụ di chuyển.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Sau khi trạng thái của các nhiệm vụ di chuyển thay đổi thành &lt;strong&gt;Stopped&lt;/strong&gt;, hãy nhấp vào nút &lt;strong&gt;Actions&lt;/strong&gt; một lần nữa, sau đó chọn &lt;strong&gt;Delete&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Aurora (PostgresSQL compatible) target</title>
+      <link>/vi/3-migratetotarget/3.2-migration/3.2.1-configtarget/c-aurorapostgres/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/vi/3-migratetotarget/3.2-migration/3.2.1-configtarget/c-aurorapostgres/</guid>
+      <description>&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Mở pgAdmin từ trong thanh tác vụ máy chủ EC2 ở cuối màn hình (tìm con voi), và nhấp vào đó/mở nó. Đóng cảnh báo về phiên bản pgAdmin mới nếu nó bật lên. Lưu ý thứ tự các biểu tượng trên phiên bản của bạn có thể khác với hình ảnh bên dưới.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;/images/3/2/1/c/0001.png?width=40pc&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Nhấp vào nút &lt;strong&gt;Thêm máy chủ &amp;gt; Máy chủ mới&lt;/strong&gt; hoặc trên máy chủ Word trong ngăn bên trái, sau đó nhấp chuột phải và tô sáng Register, sau đó tô sáng Server và tạo kết nối cơ sở dữ liệu mới cho cơ sở dữ liệu Aurora PostgreSQL mục tiêu bằng các giá trị sau. Bạn sẽ cần hoàn thành tab General và tab Connection riêng biệt. Xin lưu ý rằng mật khẩu không được cung cấp bên dưới, bạn cần vào Secrets Manager và mở DMSDBSecret và hiển thị mật khẩu. Nó cũng nằm trên tab &lt;strong&gt;Output&lt;/strong&gt; của Cloudformation Stack thuộc bài thực hành:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Aurora (PostgresSQL compatible) target</title>
+      <link>/vi/3-migratetotarget/3.2-migration/3.2.5-inspect/c-aurorapostgres/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/vi/3-migratetotarget/3.2-migration/3.2.5-inspect/c-aurorapostgres/</guid>
+      <description>&lt;p&gt;In this page, you will inspect the target database after migration.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Open &lt;strong&gt;pgAdmin4&lt;/strong&gt; from within the EC2 server, and then connect to the Target Aurora RDS (PostgreSQL) database connection that you created earlier.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Inspect the migrated data, by querying one of the tables in the target database. For example, the following query should return a table with two rows:&lt;/p&gt;&#xA;&#xD;&#xA;&lt;div class=&#34;expand&#34;&gt;&#xD;&#xA;    &lt;div class=&#34;expand-label&#34; style=&#34;cursor: pointer;&#34; onclick=&#34;$h = $(this);$h.next(&#39;div&#39;).slideToggle(100,function () {$h.children(&#39;i&#39;).attr(&#39;class&#39;,function () {return $h.next(&#39;div&#39;).is(&#39;:visible&#39;) ? &#39;fas fa-chevron-down&#39; : &#39;fas fa-chevron-right&#39;;});});&#34;&gt;&#xD;&#xA;        &lt;i style=&#34;font-size:x-small;&#34; class=&#34;fas fa-chevron-right&#34;&gt;&lt;/i&gt;&#xD;&#xA;        &lt;span&gt;&#xD;&#xA;        &#xD;&#xA;    &#x9;&#xD;&#xA;    &#x9;For Oracle Source expand this&#xD;&#xA;    &#x9;&#xD;&#xA;    &#x9;&lt;/span&gt;&#xD;&#xA;    &lt;/div&gt;&#xD;&#xA;    &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;&#xD;&#xA;        &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;SELECT&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;FROM&lt;/span&gt; dms_sample.sport_type;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;/images/3/2/5/c/0001.png?width=80pc&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Create DMS Source and Target Endpoints</title>
+      <link>/vi/3-migratetotarget/3.2-migration/3.2.3-createendpoint/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/vi/3-migratetotarget/3.2-migration/3.2.3-createendpoint/</guid>
+      <description>&lt;p&gt;Bây giờ bạn đã có một phiên bản sao, bạn cần tạo các điểm cuối nguồn và đích cho cơ sở dữ liệu mẫu.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Nhấp vào liên kết &lt;strong&gt;Điểm cuối&lt;/strong&gt; ở bên trái, sau đó nhấp vào &lt;strong&gt;Tạo điểm cuối&lt;/strong&gt; ở góc trên bên phải.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;/images/3/2/3/0000.png?width=80pc&#34; alt=&#34;Bảng điều khiển DMS Endpoints&#34;&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Nhập thông tin sau để tạo một điểm cuối cho cơ sở dữ liệu nguồn &lt;strong&gt;dms_sample&lt;/strong&gt;. Xin lưu ý rằng mật khẩu không được cung cấp dưới đây, bạn cần vào Secrets Manager và mở &lt;strong&gt;DMSDBSecret&lt;/strong&gt; để tiết lộ mật khẩu SQL Server (giống như trước nếu bạn đã thực hiện điều này). Nó cũng nằm trong tab đầu ra của Cloudformation Stack đầu tiên dưới mật khẩu, tùy thuộc vào việc bạn sử dụng SQL Server hay Oracle:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Giải pháp</title>
+      <link>/vi/6-troubleshooting/6.1-memorypressure/6.1.3-resolution/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/vi/6-troubleshooting/6.1-memorypressure/6.1.3-resolution/</guid>
+      <description>&lt;p&gt;Để giải quyết lỗi tác vụ DMS do áp lực bộ nhớ, chúng ta có hai tùy chọn&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Tùy chọn 1. Tăng bộ nhớ trên phiên bản sao chép DMS.&lt;/strong&gt; Bạn có thể tăng bộ nhớ bằng cách sửa đổi phiên bản DMS và chọn lớp phiên bản có bộ nhớ cao hơn. Vui lòng tham khảo &lt;a href=&#34;https://docs.aws.amazon.com/dms/latest/userguide/CHAP_ReplicationInstance.Types.html&#34;&gt;tài liệu AWS DMS này&lt;/a&gt; để chọn đúng loại phiên bản cho khối lượng công việc của bạn.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Giải pháp</title>
+      <link>/vi/6-troubleshooting/6.2-tableerrors/6.2.3-resolution/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/vi/6-troubleshooting/6.2-tableerrors/6.2.3-resolution/</guid>
+      <description>&lt;p&gt;Bây giờ khi chúng ta biết nguyên nhân gốc rễ của lỗi, giải pháp là phần dễ dàng trong tình huống này. Để giải quyết &lt;strong&gt;duplicate key violation (vi phạm khóa trùng lặp)&lt;/strong&gt; để bạn có thể tải lại dữ liệu từ cơ sở dữ liệu nguồn, bạn sẽ cần kết nối với cơ sở dữ liệu đích và cắt bớt tất cả các bảng đang ở trạng thái &lt;strong&gt;Lỗi&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Giám sát sự kiện thu nhỏ quy mô</title>
+      <link>/vi/4-serverless/4.2-scaletesting/4.2.3-monitordownscale/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/vi/4-serverless/4.2-scaletesting/4.2.3-monitordownscale/</guid>
+      <description>&lt;p&gt;Không giống như việc tăng quy mô, phản ứng mạnh mẽ với tải tăng trên máy chủ nguồn, việc giảm quy mô diễn ra dần dần hơn. Quá trình giảm quy mô mất một thời gian để điều chỉnh dung lượng, cho phép chuyển đổi mượt mà hơn khi nhu cầu trên hệ thống nguồn giảm.&lt;/p&gt;&#xA;&lt;p&gt;Sau khi tải CDC đã bắt kịp, thời gian làm mát là trong một giờ, trong đó tác vụ không có máy chủ DMS kích hoạt sự kiện giảm quy mô của DCU.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Table Statistics</title>
+      <link>/vi/5-monitoring/5.3-tablestatistics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/vi/5-monitoring/5.3-tablestatistics/</guid>
+      <description>&lt;p&gt;Bảng điều khiển AWS DMS cập nhật thông tin liên quan đến trạng thái của các bảng trong quá trình di chuyển.&lt;/p&gt;&#xA;&lt;p&gt;Để xem số liệu thống kê bảng của tác vụ DMS, hãy truy cập &lt;a href=&#34;https://console.aws.amazon.com/dms/v2/home#dashboard&#34;&gt;&lt;strong&gt;Bảng điều khiển AWS DMS&lt;/strong&gt;&lt;/a&gt; và nhấp vào &lt;strong&gt;Replication Tasks&lt;/strong&gt; ở cột bên trái. Nhấp vào tác vụ từ danh sách ở bên phải.&lt;/p&gt;&#xA;&lt;p&gt;Trên trang &lt;strong&gt;DMS task&lt;/strong&gt;, điều hướng đến tab &lt;strong&gt;Table statistics&lt;/strong&gt;. Tại đây, bạn sẽ tìm thấy số liệu thống kê cho tất cả các bảng trong phạm vi &lt;strong&gt;Tác vụ DMS&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Xóa các DMS Endpoint</title>
+      <link>/vi/7-cleanup/7.3-deleteendpoints/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/vi/7-cleanup/7.3-deleteendpoints/</guid>
+      <description>&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Vẫn trong &lt;strong&gt;Database Migration Service console&lt;/strong&gt;, nhấp vào &lt;strong&gt;Endpoints&lt;/strong&gt; trong menu bên trái&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Chọn các endpoint mà bạn đã tạo như một phần của hội thảo. Sau đó, nhấp vào nút &lt;strong&gt;Actions&lt;/strong&gt; ở phía bên phải và chọn &lt;strong&gt;Delete&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Xác nhận rằng bạn muốn xóa các endpoint.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;/images/7/3/0001.png?width=85pc&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Tiếp tục đến trang tiếp theo để xóa phiên bản DMS Replication&amp;hellip;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Create a DMS Migration Task</title>
+      <link>/vi/3-migratetotarget/3.2-migration/3.2.4-createtask/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/vi/3-migratetotarget/3.2-migration/3.2.4-createtask/</guid>
+      <description>&lt;p&gt;AWS DMS sử dụng &lt;strong&gt;Nhiệm vụ di chuyển cơ sở dữ liệu&lt;/strong&gt; để di chuyển dữ liệu từ nguồn sang cơ sở dữ liệu đích.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Nhấp vào &lt;strong&gt;Nhiệm vụ di chuyển cơ sở dữ liệu&lt;/strong&gt; trên menu bên trái, sau đó nhấp vào nút &lt;strong&gt;Tạo nhiệm vụ&lt;/strong&gt; ở góc trên bên phải.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;/images/3/2/4/0001.png?width=80pc&#34; alt=&#34;Tạo nhiệm vụ&#34;&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Tạo nhiệm vụ di chuyển dữ liệu với các giá trị sau để di chuyển cơ sở dữ liệu &lt;code&gt;**dms_sample**&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Delete the DMS Replication Instance</title>
+      <link>/vi/7-cleanup/7.4-deleterepinstance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/vi/7-cleanup/7.4-deleterepinstance/</guid>
+      <description>&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Vẫn trong &lt;strong&gt;Database Migration Service console&lt;/strong&gt;, nhấp vào &lt;strong&gt;Replication instances&lt;/strong&gt; trong menu bên trái&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Chọn phiên bản sao chép mà bạn đã tạo như một phần của hội thảo. Sau đó, nhấp vào nút &lt;strong&gt;Actions&lt;/strong&gt; ở phía bên phải và chọn &lt;strong&gt;Delete&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Xác nhận rằng bạn muốn xóa máy sao chép.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;/images/7/4/0001.png?width=85pc&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Tiếp tục đến trang tiếp theo để xóa phần còn lại của tài nguyên&amp;hellip;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Oracle target</title>
+      <link>/vi/3-migratetotarget/3.2-migration/3.2.5-inspect/d-oracle/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/vi/3-migratetotarget/3.2-migration/3.2.5-inspect/d-oracle/</guid>
+      <description>&lt;p&gt;In this page, you will inspect the target database after migration.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Go back to the EC2 instance we used earlier, once connected, open Oracle SQL Developer, and click the green button to add a new connection using the following values:&lt;/p&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Parameter&lt;/th&gt;&#xA;          &lt;th&gt;Value&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Connection Name&lt;/td&gt;&#xA;          &lt;td&gt;Target Oracle&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;User Name&lt;/td&gt;&#xA;          &lt;td&gt;dbadmin&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Password&lt;/td&gt;&#xA;          &lt;td&gt;See &lt;strong&gt;Cloudformation Output&lt;/strong&gt; tab &amp;amp; &lt;strong&gt;&lt;em&gt;DMSDBSecretP&lt;/em&gt;&lt;/strong&gt; or look it up in AWS Secrets Manager for Oracle target&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Save Password&lt;/td&gt;&#xA;          &lt;td&gt;Check&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Hostname&lt;/td&gt;&#xA;          &lt;td&gt;&amp;lt; TargetOracle Endpoint (you can find this in Cloudformation Output tab or goto RDS service in console and pick your RDS Oracle Target instance&amp;gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Port&lt;/td&gt;&#xA;          &lt;td&gt;1521&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;SID/Service Name&lt;/td&gt;&#xA;          &lt;td&gt;TargetDB&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;p&gt;&lt;img src=&#34;/images/3/2/5/d/0001.png?width=80pc&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Task Logs</title>
+      <link>/vi/5-monitoring/5.4-tasklogs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/vi/5-monitoring/5.4-tasklogs/</guid>
+      <description>&lt;p&gt;AWS DMS được tích hợp &lt;strong&gt;Dịch vụ AWS CloudWatch&lt;/strong&gt; để ghi lại thông tin tác vụ trong quá trình di chuyển. Bạn có tùy chọn bật ghi log cho từng tác vụ DMS. Sau khi bật, log sẽ liên tục được xuất bản thông qua log cloudWatch.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Để xem log tác vụ DMS, hãy truy cập &lt;a href=&#34;https://console.aws.amazon.com/dms/v2/home#/dashboard&#34;&gt;&lt;strong&gt;Bảng điều khiển AWS DMS&lt;/strong&gt;&lt;/a&gt; và nhấp vào &lt;strong&gt;Nhiệm vụ sao chép&lt;/strong&gt; ở cột bên trái. Nhấp vào tác vụ từ danh sách ở bên phải. Khi bạn vào trang &lt;strong&gt;Nhiệm vụ DMS&lt;/strong&gt;, hãy tìm nút &lt;strong&gt;View logs&lt;/strong&gt; ở góc trên bên phải. Bạn cũng có thể mở log tác vụ từ tab &lt;strong&gt;Overview details&lt;/strong&gt; trên cùng một trang.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Amazon S3 Target</title>
+      <link>/vi/3-migratetotarget/3.2-migration/3.2.5-inspect/e-s3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/vi/3-migratetotarget/3.2-migration/3.2.5-inspect/e-s3/</guid>
+      <description>&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Go to your target S3 bucket and click on dmstargetfolder. Click on &lt;strong&gt;&lt;em&gt;dms_sample_dbo&lt;/em&gt;&lt;/strong&gt; or &lt;strong&gt;&lt;em&gt;dms_sample&lt;/em&gt;&lt;/strong&gt; subfolder. Here you will find all the tables that were migrated from the source database.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;/images/3/2/5/e/0001.png?width=80pc&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Go to the &lt;strong&gt;&lt;em&gt;sport_type&lt;/em&gt;&lt;/strong&gt; folder. Click the checkbox on the left of the .CSV object and download the file.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;/images/3/2/5/e/0002.png?width=80pc&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Open the CSV file on your computer and note that baseball and football are the only two sports that are currently listed in this table.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Các trạng thái của tác vụ</title>
+      <link>/vi/5-monitoring/5.5-taskstatus/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/vi/5-monitoring/5.5-taskstatus/</guid>
+      <description>&lt;p&gt;AWS DMS làm mới trạng thái tác vụ khi tác vụ chuyển từ trạng thái này sang trạng thái khác. Để xem trạng thái của tác vụ DMS, hãy vào &lt;strong&gt;Bảng điều khiển AWS DMS&lt;/strong&gt; và nhấp vào &lt;strong&gt;DMS Migration Tasks&lt;/strong&gt; ở cột bên trái. Ở bên phải, bạn sẽ thấy danh sách tất cả các tác vụ DMS cùng trạng thái hiện tại của chúng.&lt;/p&gt;&#xA;&lt;p&gt;Bảng sau đây hiển thị các trạng thái có thể có của một tác vụ:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Delete the CloudFormation Stack</title>
+      <link>/vi/7-cleanup/7.5-deletecfnstack/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/vi/7-cleanup/7.5-deletecfnstack/</guid>
+      <description>&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Tiếp theo, hãy vào &lt;a href=&#34;https://console.aws.amazon.com/cloudformation/&#34;&gt;&lt;strong&gt;CloudFormation console&lt;/strong&gt;&lt;/a&gt; và nhấp vào chọn &lt;strong&gt;CloudFormation Stack&lt;/strong&gt; mà bạn đã tạo trong hội thảo.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Nhấp vào nút &lt;strong&gt;Delete&lt;/strong&gt; ở góc trên bên phải. CloudFormation sẽ tự động xóa tất cả các tài nguyên mà nó đã khởi chạy trước đó. Quá trình này có thể mất tới &lt;strong&gt;15 phút&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Xác nhận rằng bạn muốn xóa stack.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;/images/7/5/0001.png?width=85pc&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Kiểm tra &lt;strong&gt;CloudFormation console&lt;/strong&gt; để đảm bảo stack mà bạn đã chọn đã bị xóa.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Delete S3 Bucket and IAM Roles</title>
+      <link>/vi/7-cleanup/7.6-deletebucketandrole/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/vi/7-cleanup/7.6-deletebucketandrole/</guid>
+      <description>&lt;div class=&#34;notices info&#34; &gt;&lt;p&gt;Phần này chỉ nên hoàn thành nếu bạn đã thực hiện phòng thí nghiệm mục tiêu Amazon S3. Bạn có thể DỪNG đọc ngay bây giờ nếu bạn đã hoàn thành bất kỳ phòng thí nghiệm nào khác trong Hội thảo di chuyển cơ sở dữ liệu vì bạn đã hoàn thành việc xóa tài nguyên cho các phòng thí nghiệm đó ở giai đoạn này.&lt;/p&gt;&#xA;&lt;/div&gt;&#xD;&#xA;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Điều hướng đến bảng điều khiển Amazon S3 và đi đến thùng mà bạn đã tạo như một phần của phòng thí nghiệm này.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Replicate Data Changes</title>
+      <link>/vi/3-migratetotarget/3.2-migration/3.2.6-replicatechange/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/vi/3-migratetotarget/3.2-migration/3.2.6-replicatechange/</guid>
+      <description>&lt;p&gt;Bây giờ bạn sẽ mô phỏng một giao dịch đến cơ sở dữ liệu nguồn bằng cách cập nhật bảng sport_type. Dịch vụ Di chuyển Cơ sở Dữ liệu sẽ tự động phát hiện và sao chép những thay đổi này đến cơ sở dữ liệu đích.&lt;/p&gt;&#xA;&lt;p&gt;Đối với Nguồn Oracle:&lt;/p&gt;&#xA;&#xD;&#xA;&lt;div class=&#34;expand&#34;&gt;&#xD;&#xA;    &lt;div class=&#34;expand-label&#34; style=&#34;cursor: pointer;&#34; onclick=&#34;$h = $(this);$h.next(&#39;div&#39;).slideToggle(100,function () {$h.children(&#39;i&#39;).attr(&#39;class&#39;,function () {return $h.next(&#39;div&#39;).is(&#39;:visible&#39;) ? &#39;fas fa-chevron-down&#39; : &#39;fas fa-chevron-right&#39;;});});&#34;&gt;&#xD;&#xA;        &lt;i style=&#34;font-size:x-small;&#34; class=&#34;fas fa-chevron-right&#34;&gt;&lt;/i&gt;&#xD;&#xA;        &lt;span&gt;&#xD;&#xA;        &#xD;&#xA;    &#x9;&#xD;&#xA;    &#x9;Mở rộng phần này nếu loại cơ sở dữ liệu nguồn của bạn là Oracle&#xD;&#xA;    &#x9;&#xD;&#xA;    &#x9;&lt;/span&gt;&#xD;&#xA;    &lt;/div&gt;&#xD;&#xA;    &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;&#xD;&#xA;        &lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Trên phiên EC2 mà bạn đã kết nối RDP, sử dụng &lt;strong&gt;Oracle SQL Developer&lt;/strong&gt; để kết nối với RDS Oracle nguồn.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>RunBook</title>
+      <link>/vi/5-monitoring/5.6-runbook/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/vi/5-monitoring/5.6-runbook/</guid>
+      <description>&lt;p&gt;Sổ tay hướng dẫn AWS DMS Monitoring cung cấp hướng dẫn chi tiết về giải pháp giám sát tự động được phát triển cho AWS Database Migration Service (DMS). Giải pháp được triển khai bằng Amazon Lambda với Python và AWS SDK, tự động hóa một số tác vụ giám sát và cảnh báo quan trọng cho toàn bộ nhóm tài nguyên DMS. Trọng tâm chính là tạo thiết lập giám sát và cảnh báo hợp nhất để đảm bảo tình trạng và hiệu suất của các phiên bản và tác vụ sao chép DMS.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

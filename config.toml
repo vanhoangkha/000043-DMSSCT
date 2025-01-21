@@ -11,14 +11,19 @@ home = [ "HTML", "RSS", "JSON"]
   # Git hub repo link
   editURL = ""
   description = ""
-  author = "journeyoftheaverageguy@gmail.com"
+  author = "longthg"
   showVisitedLinks = true
   disableBreadcrumb = false
   disableNextPrev = false
-  
+
+
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = true
+
 [Languages]
 [Languages.en]
-title = "AWS DATABASE MIGRATION"
+contentDir = 'content/en'
+title = "AWS Workshop - Data Migration"
 weight = 1
 languageName = "English"
 
@@ -35,7 +40,8 @@ url = "https://www.facebook.com/groups/awsstudygroupfcj"
 weight = 20
 
 [Languages.vi]
-title = "DI CHUYỂN DATABASE TRÊN AWS"
+contentDir = 'content/vi'
+title = "AWS Workshop - Di chuyển dữ liệu"
 weight = 2
 languageName = "Tiếng Việt"
 
