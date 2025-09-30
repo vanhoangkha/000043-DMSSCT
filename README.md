@@ -1,3 +1,1 @@
-# AWS Workshop Template - Cloud Journey/AWS Study Group
-
-As it was...
+# 000043-DMSSCT Workshop
